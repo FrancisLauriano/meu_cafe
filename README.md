@@ -8,7 +8,7 @@ Projeto da Disciplina de Desenvolvimento Web
 $ npm install
 ```
 
-## Prótotipos - Aplicação para Cliente realizar pedidos a um restaurante
+## Prótotipo do Projeto no Figma
 
 ### 1- Aplicação Web para cliente realizar pedidos a um restaurante
 ```bash
