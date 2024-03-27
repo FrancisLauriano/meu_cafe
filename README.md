@@ -1,5 +1,5 @@
 # dev_web
-Projeto da Disciplina de Desenvolvimento Web
+Projeto de Web Site responsivo elaborado para Disciplina Desenvolvimento web com html, css, JavaScript e python - 2024.1
 
 
 ## Installation
