@@ -1,0 +1,381 @@
+ <!-- page_meu_cafe.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café</title>
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CDN Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Link do Arquivo CSS Personalizado  -->
+    <link rel="stylesheet" href="css/style_meu_cafe.css">
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+        <a href="#" class="logo">meu café <i class="fas fa-mug-hot"></i></a>
+
+        <nav class="navbar">
+            <a href="#home">início</a>
+            <a href="#about">sobre</a>
+            <a href="#menu">cardápio</a>
+            <a href="#review">avaliação</a>
+            <a href="#blog">blog</a>
+            <a href="#contact">contato</a>
+            
+        </nav>
+        <div class="icons">
+            <a href="#" class="search-icon"><i class="fas fa-search icon-large"></i></a>
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
+
+        </div>
+    </header>
+
+    <!-- INÍCIO -->
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>café fresco de manhã</h3>
+                <a href="#" class="btn">compre agora</a>
+            </div>
+
+            <div class="image">
+                <img src="image/home-img-1.png" class="main-home-image" alt="">
+            </div>
+        </div>
+
+        <div class="image-slider">
+            <img src="image/home-img-1.png" alt="">
+            <img src="image/home-img-2.png" alt="">
+            <img src="image/home-img-3.png" alt="">
+        </div>
+    </section>
+
+    
+    <!-- SOBRE -->
+    <section class="about" id="about">
+        <h1 class="heading">sobre nós <span>por que nos escolher</span></h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="image/about-img.png" alt="">
+            </div>
+
+            <div class="content">
+                <h3 class="title">o que torna nosso café especial!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel rerum laboriosam reprehenderit ipsa id
+                    repellat odio illum, voluptas, necessitatibus assumenda adipisci. Hic, maiores iste? Excepturi illo
+                    dolore mollitia qui quia.</p>
+                <a href="#" class="btn">saiba mais</a>
+                <div class="icons-container">
+                    <div class="icons">
+                        <img src="image/about-icon-1.png" alt="">
+                        <h3>café de qualidade</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="image/about-icon-2.png" alt="">
+                        <h3>nossas filiais</h3>
+                    </div>
+                    <div class="icons">
+                        <img src="image/about-icon-3.png" alt="">
+                        <h3>entrega grátis</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section class="menu" id="menu">
+        <h1 class="heading">nosso cardápio <span>cardápio popular</span></h1>
+
+        <div class="box-container">
+            <a href="#" class="box">
+                <img src="image/menu-1.png" alt="">
+                <div class="content">
+                    <h3>nosso café especial</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
+                    <span>$8.99</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-2.png" alt="">
+                <div class="content">
+                    <h3>nosso café especial</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, fugit.</p>
+                    <span>$8.99</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-3.png" alt="">
+                <div class="content">
+                    <h3>nosso café especial</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, recusandae.</p>
+                    <span>$8.99</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-4.png" alt="">
+                <div class="content">
+                    <h3>nosso café especial</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, quas.</p>
+                    <span>$8.99</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-5.png" alt="">
+                <div class="content">
+                    <h3>nosso café especial</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, vitae.</p>
+                    <span>$8.99</span>
+                </div>
+            </a>
+
+            <a href="#" class="box">
+                <img src="image/menu-6.png" alt="">
+                <div class="content">
+                    <h3>nosso café especial</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, expedita!</p>
+                    <span>$8.99</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- AVALIAÇÃO -->
+    <section class="review" id="review">
+        <h1 class="heading">avaliações <span>o que as pessoas dizem</span></h1>
+
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-quote-right"></i>
+                    <img src="image/pic-1.png" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, earum quis dolorem quaerat tenetur
+                        illum.</p>
+                    <h3>john deo</h3>
+                    <span>cliente satisfeito</span>
+                </div>
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-quote-right"></i>
+                    <img src="image/pic-2.png" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum optio quasi ut, illo ipsam
+                        assumenda.</p>
+                    <h3>john deo</h3>
+                    <span>cliente satisfeito</span>
+                </div>
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-quote-right"></i>
+                    <img src="image/pic-3.png" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius asperiores aliquam hic quis!
+                        Eligendi, aliquam.</p>
+                    <h3>john deo</h3>
+                    <span>cliente satisfeito</span>
+                </div>
+
+                <div class="swiper-slide box">
+                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-quote-right"></i>
+                    <img src="image/pic-4.png" alt="">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi modi perspiciatis distinctio
+                        velit aliquid a.</p>
+                    <h3>john deo</h3>
+                    <span>cliente satisfeito</span>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- BLOG -->  
+    <section class="blog" id="blog">
+        <h1 class="heading"><span>Nosso </span>blog</h1>
+    
+        <div class="box-container">
+            <div class="box box1 faça-seu-proprio-cafe">
+                <div class="image">
+                    <img src="./img/blog-1.jpeg" alt="" />
+                </div>
+    
+                <div class="content">
+                    <a href="#" class="title">Faça seu próprio café</a>
+                    <span>Feito por Fábio Garcia</span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit,
+                        ipsum!
+                    </p>
+                    <a href="#" class="btn">Saiba mais!</a>
+                </div>
+            </div>
+    
+            <div class="box box2 dicas-para-cozinhar">
+                <div class="image">
+                    <img src="./img/blog-2.jpeg" alt="" />
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Dicas para cozinhar</a>
+                    <span>Feito por Joana Silva</span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit,
+                        ipsum!
+                    </p>
+                    <a href="#" class="btn">Saiba mais!</a>
+                </div>
+            </div>
+    
+            <div class="box box3 beneficios-da-cafeina">
+                <div class="image">
+                    <img src="./img/blog-3.jpeg" alt="" />
+                </div>
+                <div class="content">
+                    <a href="#" class="title">Benefícios da Cafeína</a>
+                    <span>Feito por Pablo Cabral</span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit,
+                        ipsum!
+                    </p>
+                    <a href="#" class="btn">Saiba mais!</a>
+                </div>
+            </div>
+            <!-- Ver mais posts -->
+            <div class="view-more-container">
+                <a href="#" class="btn view-more">Ver mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Nosso</span> contato</h1>
+  
+        <div class="row">
+          <div class="map-container">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.948921827991!2d-34.9172019267039!3d-8.106683681097321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1ef901d1cfe5%3A0x13622393e4081716!2sRua.%20Jean%20Emile%20Favre!5e0!3m2!1spt-BR!2sbr!4v1712727934331!5m2!1spt-BR!2sbr"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+  
+          <form action="" class="contact-form">
+            <h3>Entre em contato</h3>
+            <div class="inputbox">
+              <span class="fas fa-user"></span>
+              <input type="text" placeholder="Digite seu Nome" />
+            </div>
+  
+            <div class="inputbox">
+              <span class="fas fa-envelope"></span>
+              <input type="email" placeholder="Digite seu email" />
+            </div>
+  
+            <div class="inputbox">
+              <span class="fas fa-phone"></span>
+              <input type="number" placeholder="Digite seu número de celular" />
+            </div>
+  
+            <input type="submit" value="contate agora" class="btn" />
+          </form>
+        </div>
+      </section>
+    
+        
+
+    <!-- RODAPÉ -->
+    <section class="footer">
+        <div class="box-container">
+
+            <div class="box">
+                <h3>links rápidos</h3>
+                <a href="#home"><i class="fas fa-arrow-right"></i> início</a>
+                <a href="#about"><i class="fas fa-arrow-right"></i> sobre</a>
+                <a href="#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
+                <a href="#review"><i class="fas fa-arrow-right"></i> avaliação</a>
+                <a href="#blog"><i class="fas fa-arrow-right"></i> blog</a>
+                <a href="#contact"><i class="fas fa-arrow-right"></i> contato</a>
+                
+            </div>
+
+            <div class="box">
+                <h3>informações de contato</h3>
+                <a href="#"><i class="fas fa-phone"></i> (81)99999-9999</a>
+                <a href="#"><i class="fas fa-phone"></i> (81)2222-3333</a>
+                <a href="#"><i class="fas fa-envelope"></i> meucafe@email.com</a>
+                <a href="#"><i class="fas fa-envelope"></i> Rua Jean Emile Favre - Imbiribeira, Recife - PE, 51150-000</a>
+            </div>
+
+            <div class="box">
+                <h3>informações de contato</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Link do Arquivo JS Personalizado  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+
