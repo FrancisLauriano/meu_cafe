@@ -12,5 +12,5 @@ $ npm install
 
 ### 1- Aplicação Web para cliente realizar pedidos a um restaurante
 ```bash
-https://www.figma.com/file/IrqTtjzUbG3eUXyBMEuLzT/Restaurante?type=design&node-id=247-1997&mode=design&t=mX8uVvC4I6mQFezf-0
+https://www.figma.com/file/wFuoehlSgN9DcC9hcoGqvQ/prototipo_baixa_fidelidade_Meu-Cafe?type=whiteboard&t=5MzYNfVIaKAinT07-6
 ```
