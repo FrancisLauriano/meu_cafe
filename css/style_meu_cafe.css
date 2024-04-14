@@ -70,8 +70,8 @@ section {
     border: var(--border-hover);
 }
 
-/* HEADER */
 
+/* HEADER */
 .header {
     position: fixed;
     top: 0;
@@ -105,7 +105,6 @@ section {
     color: #fc5404;
 }
 
-
 .header .btn {
     margin-top: 0;
 }
@@ -118,8 +117,7 @@ section {
 }
 
 
-/*icone pesquisa e compra*/
-
+/* ICONE PESQUISA E COMPRA */
 .icon-large {
     font-size: 24px; /* ou o tamanho desejado */
     color: black; /* Define a cor inicial dos ícones como preto */
@@ -131,7 +129,6 @@ section {
 
 
 /* HOME */
-
 .home .btn {
     background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
     color: #fff; /* Define a cor do texto como branco */
@@ -141,8 +138,6 @@ section {
     background-color: #fff; /* Define a cor de fundo da caixa como branco */
     color: #fc5404; /* Define a cor do texto como laranja */
 }
-
-
 
 .home {
     min-height: 100vh;
@@ -208,9 +203,8 @@ section {
     transform: translateY(-2rem);
 }
 
+
 /* ABOUT */
-
-
 .about .btn {
     background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
     color: #fff; /* Define a cor do texto como branco */
@@ -293,8 +287,8 @@ section {
     color: var(--main-color);
 }
 
-/* MENU */
 
+/* MENU */
 .menu {
     background: url(../image/menu-bg.jpg) no-repeat;
     background-position: center;
@@ -338,7 +332,6 @@ section {
     line-height: 1.8;
 }
 
-
 .menu .box-container .box .content p {
     font-size: 1.6rem;
     color: white;
@@ -360,7 +353,6 @@ section {
 
 
 /* REVIEW */
-
 .review .review-slider {
     padding: 7rem 0;
     display: flex;
@@ -462,9 +454,7 @@ section {
 }
 
 
-
 /* CONTACT */
-
 .contact .btn {
     background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
     color: #fff; /* Define a cor do texto como branco */
@@ -508,54 +498,6 @@ section {
 .contact form textarea {
     height: 15rem;
     resize: none;
-}
-
-.footer .box-container {
-    display: grid;
-    grid-template-columns: 1.3fr 2fr 1.5fr;
-    /* grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr)); */
-    gap: 1.5rem;
-}
-
-.footer .box-container .box h3 {
-    font-size: 2.5rem;
-    padding: 1rem 0;
-    color: var(--main-color);
-}
-
-
-.footer .box-container .box a {
-    display: block;
-    font-size: 1.5rem;
-    padding: 1rem 0;
-    color: var(--main-color);
-}
-
-.footer .box-container .box a:hover {
-    color: #ff5722;
-}
-
-
-.footer .box-container .box a i {
-    padding-right: .5rem;
-}
-
-.footer .box-container .box a:hover i {
-    padding-right: 2rem;
-    color: #ff5722;
-    
-}
-
-.footer .credit {
-    text-align: center;
-    font-size: 2rem;
-    padding: 2rem 1rem;
-    margin-top: 1rem;
-    color: var(--main-color);
-}
-
-.footer .credit span {
-    border-bottom: var(--border-hover);
 }
 
 .contact .row {
@@ -612,9 +554,57 @@ section {
 }
 
 
+/* FOOTER */
+.footer .box-container {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 1.5fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr)); */
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+
+.footer .box-container .box a:hover {
+    color: #ff5722;
+}
+
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+    color: #ff5722;
+    
+}
+
+.footer .credit {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    color: var(--main-color);
+}
+
+.footer .credit span {
+    border-bottom: var(--border-hover);
+}
+
 
 /* MEDIA QUERIES */
-
 @media (max-width: 991px) {
     html {
         font-size: 55%;
