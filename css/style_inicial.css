@@ -11,6 +11,24 @@ header img {
     max-width: 100%;
 }
 
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: black;
+}
+
+.header .navbar a:hover {
+    color: white;
+}
+
+
+#menu-btn {
+    font-size: 3rem;
+    color: blue;
+    cursor: pointer;
+    display: none;
+}
+
 /* CSS para o conteúdo */
 body {
     font-family: 'Roboto', sans-serif;

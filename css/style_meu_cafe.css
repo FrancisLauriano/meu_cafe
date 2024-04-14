@@ -363,7 +363,14 @@ section {
 
 .review .review-slider {
     padding: 7rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+/* .view-more-container {
+    margin-top: 2rem; /* Adiciona um espaçamento entre o view-more-container e a paginação */
+/*} */
 
 .review .review-slider .box {
     border: var(--border);
@@ -444,30 +451,12 @@ section {
     background: var(--main-color);
 }
 
-
-/* BLOG */
-
-.blog .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.blog .box {
-    flex: 0 0 calc(33.333% - 1rem); /* Adjust the width as needed */
-}
-
-.blog .box .content {
-    padding: 1.5rem;
-}
-
-
-.blog .btn.view-more {
+.review .btn.view-more {
     background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
     color: #fff; /* Define a cor do texto como branco */
 }
 
-.blog .btn.view-more:hover {
+.review .btn.view-more:hover {
     background-color: #fff; /* Define a cor de fundo da caixa como branco */
     color: #fc5404; /* Define a cor do texto como laranja */
 }
@@ -523,7 +512,8 @@ section {
 
 .footer .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    grid-template-columns: 1.3fr 2fr 1.5fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr)); */
     gap: 1.5rem;
 }
 
@@ -616,7 +606,7 @@ section {
     width: 100%;
     padding: 2rem;
     font-size: 1.7rem;
-    color: #fff;
+    color: black;
     text-transform: none;
     background: none;
 }
