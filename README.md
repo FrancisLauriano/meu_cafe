@@ -10,14 +10,14 @@ Foi elaborado um web site para uma cafeteria fictícia chamada "Meu Café".
 ## Instação das depedências
 
 ```bash
-$ npm install
+npm install
 ```
 
 ## Executar app
 
 ```bash
 # development
-$ npm run start
+npm run start
 ```
 
 ## Prótotipo de baixa fidelidade do Projeto "Meu Café":
