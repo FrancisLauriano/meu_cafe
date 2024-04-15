@@ -2,6 +2,7 @@
 Projeto de Web Site responsivo elaborado para Disciplina de Desenvolvimento web com html, css, JavaScript e python - 2024.1.
 
 ## Projeto "Meu Café" 
+
 ```bash
 Foi elaborado um web site para uma cafeteria fictícia chamada "Meu Café".
 ```
