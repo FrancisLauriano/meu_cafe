@@ -2,16 +2,149 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <title>Landing Page</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./css/style_inicial.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desenvolvimento de um web site para um café">
+    <title>Projeto da Disciplina de Desenvolvimento web</title>
+    <link rel="stylesheet" type="text/css" href="./css/style_inicial.css"> 
 </head>
+
 <body>
     <!-- CABEÇALHO -->
-    <header class="header">
-        <div id="menu-btn" class="fas fa-bars"></div>
+    <header>
+        <!-- NAVBAR-->
+        <nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <a href="#home">Home</a>
+            <a href="#informacoes">Informações Básicas da Disciplina</a>
+            <a href="#ementa">Ementa da Disciplina</a>
+            <a href="#objetivos">Objetivos</a>
+            <a href="#grupo">Grupo</a>
+            <a href="#descricao">Descrição</a>
+            <a href="#prototipo">Protótipo do Projeto</a>
+            <a href="#projeto">Projeto Meu Café</a>
+        </nav>
+    </header>
 
-        <a href="#" class="logo">Desenvolvimento Web <i class="fas fa-mug-hot"></i></a>
+    <!-- CORPO -->
+    <main>
+        <section class="home" id="home">
+            <div class="content">
+            <h1> Desenvolvimento web <br> com HTML5, CSS3, <br>JavaScript e Python</h1>
+            <h2> Prof. Fausto Feitosa</h2>
+            </div>
+            
+            <!-- <div class="image">
+            <img src="image/dev_web_banner2.jpg" alt="Imagem HTML, CSS e JS">
+            </div> -->
+        </section>
+
+        <section class="informacoes" id="informacoes">
+            <h3 class="heading">Informações basicas da disciplina</h3>
+            <ul>
+                <li>Carga Horaria: 80h</li>
+                <li>Instituição de ensino: Unifbv Wyden</li>
+                <li>Campus: Imbiribeira</li>
+                <li>Turma: 2024.1</li>
+                <li>Sala: 209A</li>
+            </ul>
+        </section>
+    
+        <section class="ementa" id="ementa">
+            <h3 class="heading">Ementa da Disciplina</h3>
+            <ol>
+                <li>Linguagem de marcação de hypertexto - html.</li>
+                <li>Linguagem de marcação e estilos - css.</li>
+                <li>Linguagem Javascript.</li>
+                <li>Programação de páginas dinâmicas com ajax e php.</li>
+                <li>Criação de um crud.</li>
+            </ol>
+           
+        </section>
+        
+        <section class="objetivos" id="objetivos">
+            <h3 class="heading">Objetivos</h3>
+            <ol>
+                <li>Estruturar páginas web, utilizando a linguagem de marcação de texto(html 5),para a formação de um arcabouço sobre o qual serão construidas funcionalidades dinâmicas.</li>
+                <li>Aplicar caracteristicas de estilo a páginas WEB, utlizando a linguagem de marcação de estilos (CSS 3), para praticar técnicas de engenharia de software como facilidade de compreensão, reutilização de código, manutenibilidade e interoperabilidade.</li>
+                <li>Empregar programabilidade em páginas web, utilizando linguagem javascript, mais usada no mercado, para o desenvolvimento de um sistema web com funcionalidades dinâmicas.</li>
+                <li>empregar programabilidade em páginas web, utilizando linguagem AJAX e PHP, bastante comun em sistemas legado, para o desenvolvimento de um sistema web com funcionalidades dinâmicas.</li>
+                <li>Integrar um SGBD em sistema web, baseando-se na linguagem PHP e na classe PDO, para que o sistema seja capaz de lidar com massas de dados estrututrados.</li>
+            </ol>
+        </section>
+    
+        <section class="grupo" id="grupo">
+            <h3 class="heading">Grupo</h3>
+    
+            <table>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Matricula</th>
+                    <th>Email contato</th>
+                </tr>
+    
+                <tr>
+                    <td>Matheus Henrique Varejão Botelho</td>
+                    <td>2024.02.39718-4</td>
+                    <td>202402397184@alunos.unifbv.edu.br</td>
+                </tr>
+    
+                <tr>
+                    <td>Diego Assis Pereira dos Santos</td>
+                    <td>2022.03.83817-2</td>
+                    <td>202203838172@alunos.unifbv.edu.br</td>
+                </tr>
+    
+                <tr>
+                    <td>Thiago Santos Medeiros</td>
+                    <td>2021.03.85727-2</td>
+                    <td>202103857272@alunos.unifbv.edu.br</td>
+                </tr>
+    
+                <tr>
+                    <td>Franciscleide Lauriano da Silva</td>
+                    <td>2023.02.23382-1</td>
+                    <td>202302233821@alunos.unifbv.edu.br</td>
+                </tr>
+    
+                <tr>
+                    <td>Izabela Salazar Fernandes</td>
+                    <td>2024.02.39704-4</td>
+                    <td>202402397044@alunos.unifbv.edu.br</td>
+                </tr>
+            </table>
+        </section>  
+        
+        <section class="descricao" id="descricao">
+            <dl>
+                <h3 class="heading">Descrição</h3>
+                <dd><p>O projeto consiste em fazer um cárdapio eletrônico para que clientes possam fazer seus pedidos de forma totalmente online, utilizando linguagens de programação como html, css e Javascript.</p></dd>
+            </dl>
+        </section>
+
+        <section class="prototipo" id="prototipo">
+            <h3 class="heading">Protótipo do Projeto</h3>
+            <dl>
+                <dd><p>
+                    Criamos um prótotipo de baixa fidelidade com o objetivo exploratório do projeto e para validar conceitos e decidir se uma ideia tem ou não valor funcional. 
+                </p></dd>
+            </dl>
+            <a href="" class="btn">Acesse Protótipo</a>
+        </section>
+    
+        <section class="projeto" id="projeto">
+            <h3 class="heading">Repositório do Projeto</h3>
+            <dl>
+                <dd><p>
+                    Para acessar projeto "Meu Café" clique no botão abaixo: 
+                </p></dd>
+            </dl>
+            <a href="page_meu_cafe.html" class="btn">Meu Café</a>
+        </section>
+
+    </main>
+    <!-- <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
 
         <nav class="navbar">
 
@@ -25,94 +158,6 @@
             <a href="#projeto">projeto meu café</a>
             
         </nav>
-    </header>
-    
-    <h1> Desenvolvimento web com html, css, JavaScript e python</h1>
-    <h2> Prof. Fausto Feitosa</h2>
-    <section class="informacoes" id="informacoes">
-        <h3> Informações basicas da disciplina</h3>
-        <ul>
-            <li>Carga Horaria: 80h</li>
-            <li>Instituição de ensino: Unifbv Wyden</li>
-            <li>Campus: Imbiribeira</li>
-            <li>Turma: 2024.1</li>
-            <li>Sala: 209A</li>
-        </ul>
-    </section>
-
-    <section class="ementa" id="ementa">
-        <h3> Ementa da Disciplina</h3>
-        <p> Linguagem de marcação de hypertexto - html. Linguagem de marcação e estilos - css. Linguagem Javascript.
-            Programação de páginas dinâmicas com ajax e php. Criação de um crud.
-        </p>
-    </section>
-    
-    <section class="objetivos" id="objetivos">
-            <h3>Objetivos</h3>
-        <ol>
-            <li>Estruturar páginas web, utilizando a linguagem de marcação de texto(html 5),para a formação de um arcabouço sobre o qual serão construidas funcionalidades dinâmicas.</li>
-            <li>Aplicar caracteristicas de estilo a páginas WEB, utlizando a linguagem de marcação de estilos (CSS 3), para praticar técnicas de engenharia de software como facilidade de compreensão, reutilização de código, manutenibilidade e interoperabilidade.</li>
-            <li>Empregar programabilidade em páginas web, utilizando linguagem javascript, mais usada no mercado, para o desenvolvimento de um sistema web com funcionalidades dinâmicas.</li>
-            <li>empregar programabilidade em páginas web, utilizando linguagem AJAX e PHP, bastante comun em sistemas legado, para o desenvolvimento de um sistema web com funcionalidades dinâmicas.</li>
-            <li>Integrar um SGBD em sistema web, baseando-se na linguagem PHP e na classe PDO, para que o sistema seja capaz de lidar com massas de dados estrututrados.</li>
-        </ol>
-    </section>
-
-    <section class="grupo" id="grupo">
-        <h3>Grupo</h3>
-
-        <table width="100%" border="1">
-            <tr>
-                <th>Aluno</th>
-                <th>Matricula</th>
-                <th>Email contato</th>
-            </tr>
-
-            <tr>
-                <td>Matheus Henrique Varejão Botelho</td>
-                <td>2024.02.39718-4</td>
-                <td>202402397184@alunos.unifbv.edu.br</td>
-            </tr>
-
-            <tr>
-                <td>Diego Assis Pereira dos Santos</td>
-                <td>2022.03.83817-2</td>
-                <td>202203838172@alunos.unifbv.edu.br</td>
-            </tr>
-
-            <tr>
-                <td>Thiago Santos Medeiros</td>
-                <td>2021.03.85727-2</td>
-                <td>202103857272@alunos.unifbv.edu.br</td>
-            </tr>
-
-            <tr>
-                <td>Franciscleide Lauriano da Silva</td>
-                <td>2023.02.23382-1</td>
-                <td>202302233821@alunos.unifbv.edu.br</td>
-            </tr>
-
-            <tr>
-                <td>Izabela Salazar Fernandes</td>
-                <td>2024.02.39704-4</td>
-                <td>202402397044@alunos.unifbv.edu.br</td>
-            </tr>
-        </table>
-    </section>    
-    <section class="prototipo" id="prototipo">
-        <h3><p>Protótipo projeto</p></h3>
-    </section>
-    
-    <section class="descricao" id="descricao">
-        <dl>
-            <dt><h3>Descrição:</h3></dt>
-            <dd><h3>O projeto consiste em fazer um cárdapio eletrônico para que clientes possam fazer seus pedidos de forma totalmente online, utilizando linguagens de programação como html, css e Javascript.</h3></dd>
-        </dl>
-    </section>
-
-    <section class="projeto" id="projeto">
-        <h3>Para acessar o protótipo do projeto clique no botão abaixo</h3>
-        <a href="page_meu_cafe.html"><button>Meu Café</button></a>
-    </section>
+    </header> -->
     </body>
 </html>
