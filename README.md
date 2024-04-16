@@ -7,7 +7,7 @@ Projeto de Web Site responsivo elaborado para Disciplina de Desenvolvimento web 
 Foi elaborado um web site para uma cafeteria fictícia chamada "Meu Café".
 ```
 
-## Instação das depedências
+## Instalação das depedências
 
 ```bash
 npm install
