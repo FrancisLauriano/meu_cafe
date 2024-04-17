@@ -454,6 +454,7 @@ section {
 }
 
 
+
 /* AVALIAÇÃO */
 .form {
     width: 400px;
@@ -464,7 +465,7 @@ section {
     box-shadow: 3px 4px 8px rgba(128, 128, 128, 0.568);
 }
 
-.avaliação {
+.avaliacao {
    display: flex;
    font-size: 40px;
    padding-left: 10px;
@@ -488,7 +489,7 @@ section {
    content: "\2606";
 } 
 
-.avaliação:hover .star-icon::before {
+.avaliacao:hover .star-icon::before {
     content: "\2605";
  } 
 
@@ -561,7 +562,8 @@ section {
    border: .2rem dashed var(--main-color);
 }
 
- .formulario form > button {
+ .formulario form .btn.view-more {
+    text-align: center; /* texto alinhado no centro*/
     display: inline-block;
     border: .2rem solid var(--main-color);
     outline: none;
@@ -577,7 +579,8 @@ section {
     margin-right: 89px;
  }
 
- .formulario form > button:hover {
+
+ .formulario form .btn.view-more:hover {
     background-color: #fff;
     border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
     border: .2rem dashed var(--main-color);
@@ -586,8 +589,7 @@ section {
 
 
  /* Obrigado */
-
- .Obrigado {
+ .obrigado {
     width: 400px;
     height: 450px;
     margin-top: 6rem;
