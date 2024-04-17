@@ -454,6 +454,168 @@ section {
 }
 
 
+/* AVALIAÇÃO */
+.form {
+    width: 400px;
+    height: 450px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 3px 4px 8px rgba(128, 128, 128, 0.568);
+}
+
+.avaliação {
+   display: flex;
+   font-size: 40px;
+   padding-left: 10px;
+   margin: 0px;
+   padding-top: 30px;
+   justify-content: center;
+}
+
+.star-icon {
+   list-style: none;
+   border: none;
+   cursor: pointer;
+   color: var(--main-color);
+}
+
+.star-icon::before {
+   content:"\2605";
+}
+
+.star-icon.ativo ~ .star-icon::before {
+   content: "\2606";
+} 
+
+.avaliação:hover .star-icon::before {
+    content: "\2605";
+ } 
+
+.star-icon:hover ~ .star-icon::before {
+    content: "\2606";
+ } 
+
+ .titulo {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: bolder;
+    margin-top: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--main-color);
+ }
+
+ .sub-titulo {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    color: var(--main-color);
+ }
+
+ .formulario {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+ }
+
+ .formulario input, .formulario textarea {
+    width: calc(50% - 8px);
+    height: 48px;
+    border-radius: 8px;
+ }
+
+ .formulario input {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border: .2rem solid var(--main-color);
+ }
+
+ .formulario input:hover {
+   background-color: #fff;
+   border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+   border: .2rem dashed var(--main-color);
+ }
+
+ .formulario textarea {
+    width: 100%;
+    height: 100px;
+    padding-left: 15px;
+    padding-top: 10px;
+    max-height: 100px;
+    max-width: 100%;
+    min-height: 100px;
+    min-width: 100%;
+    border: .2rem solid var(--main-color);
+ }
+
+ .formulario textarea:hover {
+   background-color: #fff;
+   border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+   border: .2rem dashed var(--main-color);
+}
+
+ .formulario form > button {
+    display: inline-block;
+    border: .2rem solid var(--main-color);
+    outline: none;
+    width: 180px;
+    height: 48px;
+    border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    background-color: #fc5404;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 89px;
+    margin-right: 89px;
+ }
+
+ .formulario form > button:hover {
+    background-color: #fff;
+    border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    border: .2rem dashed var(--main-color);
+    color: #fc5404;
+ }
+
+
+ /* Obrigado */
+
+ .Obrigado {
+    width: 400px;
+    height: 450px;
+    margin-top: 6rem;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 3px 4px 8px rgba(128, 128, 128, 0.568);
+ }
+ 
+ .figura {
+    font-size: 80px;
+    display: flex;
+    color: var(--main-color);
+    padding-bottom: 0;
+    justify-content: center;
+    margin-top: 95px;
+ }
+ 
+ .textos {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--main-color);
+    margin-top: 10px;
+ }
+
+
 /* CONTACT */
 .contact .btn {
     background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
