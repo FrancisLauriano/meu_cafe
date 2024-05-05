@@ -17,7 +17,7 @@ npm install
 
 ```bash
 # development
-npm run start
+npm start
 ```
 
 ## Prótotipo de baixa fidelidade do Projeto "Meu Café":
