@@ -1,0 +1,291 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-color);
+    --border-hover: .2rem dashed var(--main-color);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    font-size: 9rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: .05rem var(--main-color);
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+    margin-top: 50px;
+}
+
+.heading span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--main-color);
+    background: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+}
+
+.header .logo {
+    color: var(--main-color);
+    font-size: 2.3rem;
+}
+
+.header .logo i {
+    padding-left: .5rem;
+}
+
+.header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.header .navbar a:hover {
+    color: #fc5404;
+}
+
+
+.header .btn {
+    margin-top: 0;
+}
+
+#menu-btn {
+    font-size: 3rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+/*icone pesquisa e compra*/
+
+.icon-large {
+    font-size: 24px; /* ou o tamanho desejado */
+    color: black; /* Define a cor inicial dos ícones como preto */
+}
+
+.icon-large:hover {
+    color:  #fc5404; /* Altera a cor para laranja quando o mouse passa sobre os ícones */
+}
+
+#info{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: orangered;
+    -webkit-text-stroke: .05rem var(--main-color);
+    letter-spacing: .1rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+}
+
+.field{
+    background-color: rgb(223, 223, 223);
+}
+
+/* STYLE RODAPE*/
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: var(--main-color);
+}
+
+.footer .box-container .box a:hover {
+    color: #ff5722;
+}
+
+
+.footer .box-container .box a i {
+    padding-right: .5rem;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+    color: #ff5722;
+    
+}
+
+.footer{
+    background-color: white;
+}
+
+.footer .credit {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    color: var(--main-color);
+}
+
+.footer .credit span {
+    border-bottom: var(--border-hover);
+}
+
+.heading{
+    color: #fc5404;
+    padding: 50px;
+    font-size: 500%;
+}
+
+.boxForm{
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset{
+    border: 3px solid black;
+    width:100%;
+    height: 50%;
+    background-color: #f1f1f1;
+    box-shadow: 3px 4px 8px rgba(128, 128, 128, 0.568);
+}
+
+legend{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 20px;
+}
+
+h2{
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.inputbox{
+    position: relative;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.inputuser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-size: 15px;
+    color: black;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.animacao{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.inputuser:focus ~ .animacao,
+.inputuser:valid ~ .animacao{
+    top: -20px;
+    font-size: 13px;
+    color: black;
+}
+
+#submit{
+    width: 80%;
+    height: 20%;
+    border: none;
+    padding: 5px;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size: 20px;
+    border-radius: 8px;
+    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+#submit:hover{
+    background-color:  #c1c1c1 ; /* Define a cor de fundo da caixa como laranja escuro */
+    color: orangered; /* Define a cor do texto como branco */
+}
+
+#checkbox{
+    margin-top: 3rem;
+}
+
