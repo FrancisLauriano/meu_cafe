@@ -1,4 +1,4 @@
-/* style_meu_cafe.css */
+/* style_compra.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 :root {
@@ -33,9 +33,9 @@ section {
 }
 
 .heading {
-    font-size: 9rem;
-    text-transform: uppercase;
-    color: transparent;
+    font-size: 5rem;
+    padding-top: 10rem;
+    color: var(--main-color);
     -webkit-text-stroke: .05rem var(--main-color);
     letter-spacing: .2rem;
     text-align: center;
@@ -43,7 +43,7 @@ section {
     position: relative;
 }
 
-.heading span {
+/* .heading span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -51,7 +51,7 @@ section {
     width: 100%;
     color: var(--main-color);
     font-size: 3rem;
-}
+} */
 
 .btn {
     display: inline-block;
@@ -288,21 +288,22 @@ section {
 }
 
 
-/* MENU */
-.menu {
+/* COMPRA */
+/* .compra {
     background: url(../image/menu-bg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 
-.menu .box-container {
+.compra .box-container {
+    padding-top: 10rem;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
 }
 
-.menu .box-container .box {
+.compra .box-container .box {
     flex: 1 1 42rem;
     padding: 2rem;
     border: var(--border);
@@ -315,48 +316,48 @@ section {
 }
 
 
-.menu .box-container .box:hover {
+/* .compra .box-container .box:hover {
     border: var(--border-hover);
     border-radius: var(--border-radius-hover);
     background-color: #fff;
-}
+} */
 
-.menu .box-container .box img {
+.compra .box-container .box img {
     height: 8rem;
     margin-left: -6rem;
 }
 
-.menu .box-container .box .content h3 {
+.compra .box-container .box .content h3 {
     font-size: 2.2rem;
     color: white;
     line-height: 1.8;
 }
 
-.menu .box-container .box .content p {
+.compra .box-container .box .content p {
     font-size: 1.6rem;
     color: white;
     line-height: 1.8;
     padding: 1rem 0;
 }
 
-.menu .box-container .box .content span {
+.compra .box-container .box .content span {
     font-size: 2rem;
     color: white;
     line-height: 1.8;
 }
 
-.menu .box-container .box:hover .content h3,
+/* .menu .box-container .box:hover .content h3,
 .menu .box-container .box:hover .content p,
-.menu .box-container .box:hover .content span {
-    color: #556b2f; /* Altera a cor do texto para verde ao passar o mouse sobre a caixa */
-}
+.menu .box-container .box:hover .content span { */
+    /* color: #556b2f;  Altera a cor do texto para verde ao passar o mouse sobre a caixa 
+} */
 
-.menu .btn.view-more {
+.compra .btn.view-more {
     background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
     color: #fff; /* Define a cor do texto como branco */
 }
 
-.menu .btn.view-more:hover {
+.compra .btn.view-more:hover {
     background-color: #fff; /* Define a cor de fundo da caixa como branco */
     color: #fc5404; /* Define a cor do texto como laranja */
 }
@@ -846,14 +847,14 @@ section {
         font-size: 4rem;
     }
 
-    .menu .box-container .box {
+    .compra .box-container .box {
         margin-left: 0;
         margin-top: 6rem;
         flex-flow: column;
         text-align: center;
     }
 
-    .menu .box-container .box img {
+    .compra .box-container .box img {
         margin-left: 0;
         margin-top: -6rem;
     }

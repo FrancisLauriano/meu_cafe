@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+ <!-- espresso.html -->
+ <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -17,12 +18,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Link do Arquivo CSS Personalizado  -->
-    <link rel="stylesheet" href="../css/style_meu_cafe.css"> 
+    <link rel="stylesheet" href="../css/style_compra.css">  
 </head>
 <body>
     <!-- CABEÇALHO -->
     <header class="header">
-        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="landing_page_meu_cafe.html" class="fas fa-bars"></div>
 
         <a href="../html/landing_page_meu_cafe.html" class="logo">meu café <i class="fas fa-mug-hot"></i></a>
 
@@ -33,6 +34,7 @@
             <a href="landing_page_meu_cafe.html#review">avaliação</a>
             <a href="landing_page_meu_cafe.html#contact">contato</a>
             
+            
         </nav>
         <div class="icons">
             <a href="#" class="search-icon"><i class="fas fa-search icon-large"></i></a>
@@ -40,6 +42,45 @@
 
         </div>
     </header>
+
+
+        <!-- OPÇÕES DE COMPRA -->
+        <section class="compra" id="compra">
+            
+            <div class="box-container">
+                <!-- Adicione caixas para cada item do cardápio com as opções -->
+                      
+                <div class="box">    
+                    <div class="item">
+                        <img src="../image/menu-2.png" alt="">
+                        <div class="content">
+                            <h3>Espresso</h3>
+                            <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
+                            <span>$8.99</span>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('espresso-quantidade')">-</button>
+                                <input type="text" id="espresso-quantidade" value="1" readonly>
+                                <button onclick="increaseQuantity('espresso-quantidade')">+</button>
+                            </div>    
+                            <div>
+                                <label for="espresso-tipo">Escolha o tipo de café:</label>
+                                <select id="espresso-tipo">
+                                    <option value="normal">Café Normal</option>
+                                    <option value="descafeinado">Café Descafeinado</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="espresso-observacoes">Observações:</label>
+                                <textarea id="espresso-observacoes" rows="4"></textarea>
+                            </div>
+                            <a href="#" class="btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>    
+
+                <!-- Repita o código acima para cada item do cardápio -->
+            </div>
+        </section>
 
      <!-- RODAPÉ -->
      <section class="footer">
@@ -52,7 +93,7 @@
                 <a href="#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
                 <a href="#review"><i class="fas fa-arrow-right"></i> avaliação</a>
                 <a href="#contact"><i class="fas fa-arrow-right"></i> contato</a> 
-                <a href="Cadastro.html"><i class="fas fa-arrow-right"></i> cadastre-se</a>
+               
             </div>
 
             <div class="box">
@@ -73,16 +114,15 @@
         </div>
     </section>
 
-    
-    
-
 
     <!-- SWIPER -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- Link do Arquivo JS Personalizado  -->
-    <script src="../js/script.js"></script> 
+    <script src="../js/script_espresso.js"></script> 
 
     
 </body>
 </html>
+
+

@@ -1,0 +1,295 @@
+ <!-- compra.html -->
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Café</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="../image/icon_cafe.ico" type="image/x-icon"> 
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- Font Awesome CDN Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Link do Arquivo CSS Personalizado  -->
+    <link rel="stylesheet" href="../css/style_compra.css">  
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div id="landing_page_meu_cafe.html" class="fas fa-bars"></div>
+
+        <a href="../html/landing_page_meu_cafe.html" class="logo">meu café <i class="fas fa-mug-hot"></i></a>
+
+        <nav class="navbar">
+            <a href="landing_page_meu_cafe.html#home">início</a>
+            <a href="landing_page_meu_cafe.html#about">sobre</a>
+            <a href="landing_page_meu_cafe.html#menu">cardápio</a>
+            <a href="landing_page_meu_cafe.html#review">avaliação</a>
+            <a href="landing_page_meu_cafe.html#contact">contato</a>
+            
+            
+        </nav>
+        <div class="icons">
+            <a href="#" class="search-icon"><i class="fas fa-search icon-large"></i></a>
+            <a href="../html/carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
+
+        </div>
+    </header>
+
+
+        <!-- OPÇÕES DE COMPRA -->
+        <section class="compra" id="compra">
+            
+            <div class="box-container">
+                <!-- Adicione caixas para cada item do cardápio com as opções -->
+                <div class="box">
+                    <div class="item">
+                        <img src="../image/menu-1.png" alt="">
+                        <div class="content">
+                            <h3>Cappuccino Italiano</h3>
+                            <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
+                            <span>$8.99</span>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('cappuccino-quantidade')">-</button>
+                                <input type="text" id="cappuccino-quantidade" value="1" readonly>
+                                <button onclick="increaseQuantity('cappuccino-quantidade')">+</button>
+                            </div>    
+                            <div>
+                                <label for="cappuccino-tipo">Escolha o tipo de café:</label>
+                                <select id="cappuccino-tipo">
+                                    <option value="normal">Café Normal</option>
+                                    <option value="descafeinado">Café Descafeinado</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="cappuccino-leite">Escolha o tipo de leite:</label>
+                                <select id="cappuccino-leite">
+                                    <option value="vaca">Leite de Vaca</option>
+                                    <option value="soja">Leite de Soja</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="cappuccino-observacoes">Observações:</label>
+                                <textarea id="cappuccino-observacoes" rows="4"></textarea>
+                            </div>
+                            <a href="#" class="btn">Adicionar ao Carrinho</a>
+                        </div>
+                        
+                    </div> 
+                </div>       
+
+                <div class="box">    
+                    <div class="item">
+                        <img src="../image/menu-2.png" alt="">
+                        <div class="content">
+                            <h3>Espresso</h3>
+                            <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
+                            <span>$8.99</span>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('cappuccino-quantidade')">-</button>
+                                <input type="text" id="cappuccino-quantidade" value="1" readonly>
+                                <button onclick="increaseQuantity('cappuccino-quantidade')">+</button>
+                            </div>    
+                            <div>
+                                <label for="espresso-tipo">Escolha o tipo de café:</label>
+                                <select id="espresso-tipo">
+                                    <option value="normal">Café Normal</option>
+                                    <option value="descafeinado">Café Descafeinado</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="espresso-observacoes">Observações:</label>
+                                <textarea id="espresso-observacoes" rows="4"></textarea>
+                            </div>
+                            <a href="#" class="btn">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>    
+
+                <div class="box">
+                    <div class="item">
+                        <img src="../image/menu-3.png" alt="">
+                        <div class="content">
+                            <h3>Macchiato</h3>
+                            <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
+                            <span>$8.99</span>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('cappuccino-quantidade')">-</button>
+                                <input type="text" id="cappuccino-quantidade" value="1" readonly>
+                                <button onclick="increaseQuantity('cappuccino-quantidade')">+</button>
+                            </div>    
+                            <div>
+                                <label for="macchiato-tipo">Escolha o tipo de café:</label>
+                                <select id="macchiato-tipo">
+                                    <option value="normal">Café Normal</option>
+                                    <option value="descafeinado">Café Descafeinado</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="macchiato-leite">Escolha o tipo de leite:</label>
+                                <select id="macchiato-leite">
+                                    <option value="vaca">Leite de Vaca</option>
+                                    <option value="soja">Leite de Soja</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="macchiato-observacoes">Observações:</label>
+                                <textarea id="macchiato-observacoes" rows="4"></textarea>
+                            </div>
+                            <a href="#" class="btn">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>    
+                </div>
+                
+                <div class="box"> 
+                    <div class="item">
+                        <img src="../image/menu-4.png" alt="">
+                        <div class="content">
+                            <h3>Americano</h3>
+                            <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
+                            <span>$8.99</span>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('cappuccino-quantidade')">-</button>
+                                <input type="text" id="cappuccino-quantidade" value="1" readonly>
+                                <button onclick="increaseQuantity('cappuccino-quantidade')">+</button>
+                            </div>    
+                            <div>
+                                <label for="americano-tipo">Escolha o tipo de café:</label>
+                                <select id="americano-tipo">
+                                    <option value="normal">Café Normal</option>
+                                    <option value="descafeinado">Café Descafeinado</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="americano-observacoes">Observações:</label>
+                                <textarea id="americano-observacoes" rows="4"></textarea>
+                            </div>
+                            <a href="#" class="btn">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>    
+
+                <div class="box">
+                    <div class="item">
+                        <img src="../image/menu-5.png" alt="">
+                        <div class="content">
+                            <h3>Moka</h3>
+                            <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
+                            <span>$8.99</span>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('cappuccino-quantidade')">-</button>
+                                <input type="text" id="cappuccino-quantidade" value="1" readonly>
+                                <button onclick="increaseQuantity('cappuccino-quantidade')">+</button>
+                            </div>    
+                            <div>
+                                <label for="moka-tipo">Escolha o tipo de café:</label>
+                                <select id="moka-tipo">
+                                    <option value="normal">Café Normal</option>
+                                    <option value="descafeinado">Café Descafeinado</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="moka-leite">Escolha o tipo de leite:</label>
+                                <select id="moka-leite">
+                                    <option value="vaca">Leite de Vaca</option>
+                                    <option value="soja">Leite de Soja</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="moka-observacoes">Observações:</label>
+                                <textarea id="moka-observacoes" rows="4"></textarea>
+                            </div>
+                            <a href="#" class="btn">Adicionar ao Carrinho</a>
+                        </div>  
+                    </div>      
+                </div>
+
+                <div class="box">     
+                    <div class="item">
+                        <img src="../image/menu-6.png" alt="">
+                        <div class="content">
+                            <h3>Latte</h3>
+                            <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
+                            <span>$8.99</span>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('cappuccino-quantidade')">-</button>
+                                <input type="text" id="cappuccino-quantidade" value="1" readonly>
+                                <button onclick="increaseQuantity('cappuccino-quantidade')">+</button>
+                            </div>    
+                            <div>
+                                <label for="latte-tipo">Escolha o tipo de café:</label>
+                                <select id="latte-tipo">
+                                    <option value="normal">Café Normal</option>
+                                    <option value="descafeinado">Café Descafeinado</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="latte-leite">Escolha o tipo de leite:</label>
+                                <select id="latte-leite">
+                                    <option value="vaca">Leite de Vaca</option>
+                                    <option value="soja">Leite de Soja</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="latte-observacoes">Observações:</label>
+                                <textarea id="latte-observacoes" rows="4"></textarea>
+                            </div>
+                            <a href="#" class="btn">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>    
+                </div>
+                <!-- Repita o código acima para cada item do cardápio -->
+            </div>
+        </section>
+
+     <!-- RODAPÉ -->
+     <section class="footer">
+        <div class="box-container">
+
+            <div class="box">
+                <h3>links rápidos</h3>
+                <a href="#home"><i class="fas fa-arrow-right"></i> início</a>
+                <a href="#about"><i class="fas fa-arrow-right"></i> sobre</a>
+                <a href="#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
+                <a href="#review"><i class="fas fa-arrow-right"></i> avaliação</a>
+                <a href="#contact"><i class="fas fa-arrow-right"></i> contato</a> 
+               
+            </div>
+
+            <div class="box">
+                <h3>informações de contato</h3>
+                <a href="#"><i class="fas fa-phone"></i> (81)99999-9999</a>
+                <a href="#"><i class="fas fa-phone"></i> (81)2222-3333</a>
+                <a href="#"><i class="fas fa-envelope"></i> meucafe@email.com</a>
+                <a href="#"><i class="fas fa-envelope"></i> Rua Jean Emile Favre-<br>Imbiribeira, Recife - PE, 51150-000</a>
+            </div>
+
+            <div class="box">
+                <h3>informações de contato</h3>
+                <a href="#"><i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> instagram</a>
+                <a href="#"><i class="fab fa-linkedin"></i> linkedin</a>
+                <a href="#"><i class="fab fa-twitter"></i> twitter</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Link do Arquivo JS Personalizado  -->
+    <script src="../js/script_compra.js"></script> 
+
+    
+</body>
+</html>
+
+

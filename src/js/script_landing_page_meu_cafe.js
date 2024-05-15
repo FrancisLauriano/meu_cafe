@@ -1,4 +1,4 @@
-// script.js
+// script_landing_page_meu_cafe.js
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
 
@@ -11,6 +11,8 @@ window.onscroll = () => {
     menu.classList.remove('fa-times');
     navbar.classList.remove('active');
 };
+
+
 
 document.querySelectorAll('.image-slider img').forEach(images => {
     images.onclick = () => {

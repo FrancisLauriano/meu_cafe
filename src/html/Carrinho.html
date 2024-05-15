@@ -1,12 +1,13 @@
+<!-- carrinho.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrinho de Compras</title>
-    <script src="../js/main.js"></script>
-    <link rel="stylesheet" href="../css/Styles_carrinho.css" />
+    <script src="../js/script_carrinho.js"></script>
+    <link rel="stylesheet" href="../css/styles_carrinho.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -27,100 +28,66 @@
         <header class="header">
           <div id="menu-btn" class="fas fa-bars"></div>
           
-          <span><a href="#" class="logo">meu café <i class="fas fa-mug-hot"></i></a></span>
+          <span><a href="../html/landing_page_meu_cafe.html" class="logo">meu café <i class="fas fa-mug-hot"></i></a></span>
+          
+
           
   
           <nav class="navbar">
-              <a href="page_meu_cafe.html">início</a>
-              <a href="#about">sobre</a>
-              <a href="#menu">cardápio</a>
-              <a href="#review">avaliação</a>
-              <a href="#contact">contato</a>
+            <a href="landing_page_meu_cafe.html#home">início</a>
+            <a href="landing_page_meu_cafe.html#about">sobre</a>
+            <a href="landing_page_meu_cafe.html#menu">cardápio</a>
+            <a href="landing_page_meu_cafe.html#review">avaliação</a>
+            <a href="landing_page_meu_cafe.html#contact">contato</a>
               
           </nav>
           <div class="icons">
               <a href="#" class="search-icon"><i class="fas fa-search icon-large"></i></a>
-              <a href="Carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
+              <a href="carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
   
           </div>
       </header>
-    <main>
-      <div class="page-title">Seu Carrinho</div>
-      <div class="content">
-        <section>
-          <table>
-            <thead>
-              <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Total</th>
-                <th>-</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="product">
-                    <img src="https://picsum.photos/100/120" alt="" />
-                    <div class="info">
-                      <div class="name">Nome do produto</div>
-                      <div class="category">Categoria</div>
-                    </div>
-                  </div>
-                </td>
-                <td>R$ 9,00</td>
-                <td>
-                  <div class="qty">
-                    <button><i class="bx bx-minus"></i></button>
-                    <span>2</span>
-                    <button><i class="bx bx-plus"></i></button>
-                  </div>
-                </td>
-                <td>R$ 18,00</td>
-                <td>
-                  <button class="remove"><i class="bx bx-x"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <aside>
-          <div class="box">
-            <header>Resumo da compra</header>
-            <div class="info">
-              <div><span>Sub-total</span><span>R$ 53,94</span></div>
-              <div><span>Frete</span><span>Gratuito</span></div>
-              <div>
-                <button>
-                  Adicionar cupom de desconto
-                  <i class="bx bx-right-arrow-alt"></i>
-                </button>
-              </div>
-            </div>
-            <footer>
-              <span>Total</span>
-              <span>R$ 36,00</span>
-            </footer>
-          </div>
-          <button>Finalizar Compra</button>
-        </aside>
-      </div>
 
+    <main>
+      <!-- CARRINHO DE COMPRAS -->
+      <div class="page-title">Seu Carrinho</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Tipo de Café</th>
+            <th>Tipo de Leite</th>
+            <th>Observação</th>
+            <th>Preço Unitário R$</th>
+            <th>Quantidade</th>
+            <th>Total R$</th>
+          </tr>
+        </thead>
+        <tbody id="carrinho">
+          <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
+        </tbody>
+      </table>
+      <div class="total-container">
+        <h3>Total:</h3>
+        <span id="total"></span>
+      </div>
+      <button id="concluirCompraBtn" class="btn-concluir">Concluir Compra</button>
+      
+
+      
       <section class="footer">
         <div class="box-container">
 
-            <div class="box">
-                <h3>links rápidos</h3>
-                <a href="page_meu_cafe.html"><i class="fas fa-arrow-right"></i> início</a>
-                <a href="#about"><i class="fas fa-arrow-right"></i> sobre</a>
-                <a href="#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
-                <a href="#review"><i class="fas fa-arrow-right"></i> avaliação</a>
-                <a href="#blog"><i class="fas fa-arrow-right"></i> blog</a>
-                <a href="#contact"><i class="fas fa-arrow-right"></i> contato</a>
-                <a href="Cadastro.html"><i class="fas fa-arrow-right"></i> cadastre-se</a>
-                
-            </div>
+          <div class="box">
+            <h3>links rápidos</h3>
+            <a href="#home"><i class="fas fa-arrow-right"></i> início</a>
+            <a href="#about"><i class="fas fa-arrow-right"></i> sobre</a>
+            <a href="#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
+            <a href="#review"><i class="fas fa-arrow-right"></i> avaliação</a>
+            <a href="#contact"><i class="fas fa-arrow-right"></i> contato</a> 
+           
+        </div>
 
             <div class="box">
                 <h3>informações de contato</h3>
@@ -144,3 +111,7 @@
     </main>
   </body>
 </html>
+
+
+
+
