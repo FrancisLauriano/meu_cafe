@@ -58,7 +58,7 @@ section {
     padding: .9rem 1.5rem;
     border: var(--border);
     border-radius: var(--border-radius);
-    color: var(--main-color);
+    color: white;
     background: none;
     cursor: pointer;
     margin-top: 1rem;
@@ -68,6 +68,8 @@ section {
 .btn:hover {
     border-radius: var(--border-radius-hover);
     border: var(--border-hover);
+    color: var(--main-color);
+    background: white;
 }
 
 
@@ -221,7 +223,6 @@ section {
 }
 
 .compra .box-container .box {
-    flex: 1 1 42rem;
     padding: 2rem;
     border: var(--border);
     border-radius: var(--border-radius);
@@ -261,6 +262,56 @@ section {
     font-size: 2rem;
     color: white;
     line-height: 1.8;
+}
+
+.compra .box-container .box .content a {
+    margin-left: 1rem;
+}
+
+.compra .box-container .box .content .quantity-controls button {
+    border: var(--border);
+    border-radius: var(--border-radius);
+}
+
+.compra .box-container .box .content .quantity-controls input {
+  font-weight: 500; 
+  max-width: 2.5rem;
+  font-weight: 500;
+  padding-left: 0.6rem;
+  border: var(--border);
+  border-radius: var(--border-radius)
+}
+
+.compra .box-container .box .content label {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.compra .box-container .box .content select {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    font-size: 1.3rem;
+    font-weight: 500;
+} 
+
+.compra .box-container .box .content textarea {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 4px;
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 70px;
+    max-height: 70px;
+}
+
+.compra .box-container .box .content select:hover {
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+}
+
+.compra .box-container .box .content textarea:hover {
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
 }
 
 /* .menu .box-container .box:hover .content h3,
