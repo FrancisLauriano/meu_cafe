@@ -207,15 +207,14 @@ section {
 
 /* css - AVALIAÇÃO */
 .review  {
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-
-.titulo {
+/* .titulo {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   text-transform: uppercase;
@@ -226,7 +225,31 @@ section {
   pointer-events: none;
   position: relative;
   margin-top: 10rem;
+} */
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 9rem;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: .05rem var(--main-color);
+    letter-spacing: .2rem;
+    text-align: center;
+    pointer-events: none;
+    position: relative;
+    margin-top: 10rem;
 }
+
+.titulo span {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: var(--main-color);
+    font-size: 3rem;
+} 
 
  .form {
     margin-top: 2rem;
@@ -238,6 +261,9 @@ section {
     /* border-radius: 10px; */
     background-color: #f1f1f1;
     box-shadow: 3px 4px 8px rgba(128, 128, 128, 0.568);
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 

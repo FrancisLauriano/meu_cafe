@@ -215,7 +215,7 @@ main {
   margin-top: 7rem; 
 }
 
-.page-title {
+/* .page-title {
   font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   text-transform: uppercase;
@@ -226,8 +226,32 @@ main {
   pointer-events: none;
   position: relative;
   margin-top: 10rem;
+} */
+
+
+.page-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9rem;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: .05rem var(--main-color);
+  letter-spacing: .2rem;
+  text-align: center;
+  pointer-events: none;
+  position: relative;
+  margin-top: 10rem;
 }
 
+.page-title span {
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: var(--main-color);
+  font-size: 3rem;
+} 
 
 body > main .content {
   display: flex;
@@ -423,12 +447,34 @@ aside > button:hover {
     cursor: pointer;
   }
   
-  .btn-concluir {
+  /* .btn-concluir {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  } */
+
+
+
+  .btn-concluir {
+    background-color: #4CAF50;
+    color: #fff; 
+    padding: 10px 20px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    float: right;
+  }
+
+  .btn-concluir:hover {
+    background-color: #fff; 
+    color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
     cursor: pointer;
     float: right;
   }
