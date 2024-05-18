@@ -323,11 +323,14 @@ section {
 .compra .btn {
     background-color:  #0f2310; /* Define a cor de fundo da caixa como laranja escuro */
     color: #fff; /* Define a cor do texto como branco */
+    border-color: #fff;
+
 }
 
 .compra .btn:hover {
     background-color: #fff; /* Define a cor de fundo da caixa como branco */
     color: #0f2310; /* Define a cor do texto como laranja */
+    border-color: var(--main-color);
 }
 
 .view-more-container {
