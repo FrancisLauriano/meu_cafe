@@ -294,14 +294,30 @@ section {
     font-weight: 500;
 } 
 
+.compra .box-container .box .content label[for="americano-observacoes"],
+.compra .box-container .box .content label[for="cappuccino-observacoes"],
+.compra .box-container .box .content label[for="espresso-observacoes"],
+.compra .box-container .box .content label[for="latte-observacoes"],
+.compra .box-container .box .content label[for="macchiato-observacoes"],
+.compra .box-container .box .content label[for="moka-observacoes"]  {
+    position:relative;
+    align-items: flex-start;
+    display: flex;
+    font-size: 1.4rem;
+    color: white; 
+    
+}
+
+
 .compra .box-container .box .content textarea {
     border: var(--border);
     border-radius: var(--border-radius);
-    padding: 4px;
-    min-width: 150px;
-    max-width: 150px;
-    min-height: 70px;
-    max-height: 70px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100px;
+    max-height: 100px; 
 }
 
 .compra .box-container .box .content select:hover {
