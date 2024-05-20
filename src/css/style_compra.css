@@ -300,7 +300,6 @@ section {
 .compra .box-container .box .content label[for="latte-observacoes"],
 .compra .box-container .box .content label[for="macchiato-observacoes"],
 .compra .box-container .box .content label[for="moka-observacoes"]  {
-    position:relative;
     align-items: flex-start;
     display: flex;
     font-size: 1.4rem;
@@ -337,15 +336,15 @@ section {
 } */
 
 .compra .btn {
-    background-color:  #0f2310; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #0f2310; 
+    color: #fff; 
     border-color: #fff;
 
 }
 
 .compra .btn:hover {
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #0f2310; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #0f2310; 
     border-color: var(--main-color);
 }
 
