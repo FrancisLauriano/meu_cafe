@@ -377,10 +377,26 @@ section {
 
  
 /* Obrigado */
+.review .btn{
+    margin-top: 10rem; 
+    padding: .5rem 1rem;
+    margin-right: auto;
+    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
+    color: #fff; /* Define a cor do texto como branco */
+}
+
+.review .btn:hover{
+    margin-top: 10rem; 
+    padding: .5rem 1rem;
+    margin-right: auto;
+    background-color: #fff; /* Define a cor de fundo da caixa como branco */
+    color: #fc5404; /* Define a cor do texto como laranja */
+}
+
 .obrigado {
     width: 400px;
-    height: 450px;
-    margin-top: 9rem;
+    height: 300px;
+    margin-top: 3rem;
     border: 1px solid var(--main-color);
     border-radius: var(--border-radius-hover);
     background-color: #f1f1f1;
@@ -390,11 +406,11 @@ section {
 .figura {
     font-size: 80px;
     display: flex;
-    color: var(--main-color);
+    color: #556b2f;
     padding-top: 1rem;
     padding-bottom: 0;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 25px;
 }
  
 .textos {
