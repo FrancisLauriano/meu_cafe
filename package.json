@@ -4,7 +4,7 @@
   "description": "Projeto da Disciplina de Desenvolvimento Web",
   "main": "index.js",
   "scripts": {
-    "start": "start src/index.html"
+    "start": "start templates/index.html"
   },
   "keywords": [],
   "author": "",
