@@ -43,9 +43,10 @@ function adicionarAoCarrinho() {
         cafe: tipoCafe,
         leite: tipoLeite,
         observacoes: observacoes,
-        imagem: "../image/menu-4.png" // Aqui você pode adicionar a URL da imagem correspondente ao produto
+        imagem: "../static/image/menu-4.png" // Aqui você pode adicionar a URL da imagem correspondente ao produto
     };
-
+    // "../image/menu-4.png"
+    
     // Obtém o carrinho do armazenamento local
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 

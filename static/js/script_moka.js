@@ -43,7 +43,7 @@ function adicionarAoCarrinho() {
         cafe: tipoCafe,
         leite: tipoLeite,
         observacoes: observacoes,
-        imagem: "../image/menu-5.png" // Aqui você pode adicionar a URL da imagem correspondente ao produto
+        imagem: "../static/image/menu-5.png" // Aqui você pode adicionar a URL da imagem correspondente ao produto
     };
 
     // Obtém o carrinho do armazenamento local

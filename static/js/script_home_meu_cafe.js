@@ -1,4 +1,4 @@
-// script_landing_page_meu_cafe.js
+// script_home_meu_cafe.js
 let menu = document.querySelector('#menu-btn');
 let navbar = document.querySelector('.navbar');
 
