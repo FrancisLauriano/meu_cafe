@@ -1,4 +1,4 @@
- <!-- compra.html -->
+ <!-- cappuccino_italiano.html -->
  <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,7 +9,7 @@
     <title>Meu Café</title>
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="../image/icon_cafe.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="../static/image/icon_cafe.ico" type="image/x-icon"> 
 
     <!-- SWIPER -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -18,27 +18,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Link do Arquivo CSS Personalizado  -->
-    <link rel="stylesheet" href="../css/style_compra.css">  
+    <link rel="stylesheet" href="../static/css/style_compra.css">  
 </head>
 <body>
      <!-- CABEÇALHO -->
      <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
 
-        <a href="../html/landing_page_meu_cafe.html" class="logo">meu café<i class="fas fa-mug-hot"></i></a>
+        <a href="home_meu_cafe.html" class="logo">meu café<i class="fas fa-mug-hot"></i></a>
 
         <nav class="navbar">
-            <a href="landing_page_meu_cafe.html#home">início</a>
-            <a href="landing_page_meu_cafe.html#about">sobre</a>
-            <a href="landing_page_meu_cafe.html#menu">cardápio</a>
-            <a href="landing_page_meu_cafe.html#review">avaliação</a>
-            <a href="landing_page_meu_cafe.html#contact">contato</a>
+            <a href="home_meu_cafe.html#home">início</a>
+            <a href="home_meu_cafe.html#about">sobre</a>
+            <a href="home_meu_cafe.html#menu">cardápio</a>
+            <a href="home_meu_cafe.html#review">avaliação</a>
+            <a href="home_meu_cafe.html#contact">contato</a>
             
             
         </nav>
         <div class="icons">
             <a href="#" class="search-icon"><i class="fas fa-search icon-large"></i></a>
-            <a href="../html/carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
+            <a href="carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
 
         </div>
     </header>
@@ -49,44 +49,41 @@
             
             <div class="box-container">
                 <!-- Adicione caixas para cada item do cardápio com as opções -->
-
-
                 <div class="box">
                     <div class="item">
-                        <img src="../image/menu-3.png" alt="">
+                        <img src="../static/image/menu-1.png" alt="">
                         <div class="content">
-                            <h3>Macchiato</h3>
+                            <h3>Cappuccino Italiano</h3>
                             <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
                             <span>$8.99</span>
                             <div class="quantity-controls">
-                                <button onclick="decreaseQuantity('macchiato-quantidade')">-</button>
-                                <input type="text" id="macchiato-quantidade" value="1" readonly>
-                                <button onclick="increaseQuantity('macchiato-quantidade')">+</button>
+                                <button onclick="decreaseQuantity('cappuccino-quantidade')">-</button>
+                                <input type="text" id="cappuccino-quantidade" value="1" readonly>
+                                <button onclick="increaseQuantity('cappuccino-quantidade')">+</button>
                             </div>    
                             <div>
-                                <label for="macchiato-tipo">Escolha o tipo de café:</label>
-                                <select id="macchiato-tipo">
+                                <label for="cappuccino-tipo">Escolha o tipo de café:</label>
+                                <select id="cappuccino-tipo">
                                     <option value="normal">Café Normal</option>
                                     <option value="descafeinado">Café Descafeinado</option>
                                 </select>
                             </div>
                             <div>
-                                <label for="macchiato-leite">Escolha o tipo de leite:</label>
-                                <select id="macchiato-leite">
+                                <label for="cappuccino-leite">Escolha o tipo de leite:</label>
+                                <select id="cappuccino-leite">
                                     <option value="vaca">Leite de Vaca</option>
                                     <option value="soja">Leite de Soja</option>
                                 </select>
                             </div>
                             <div>
-                                <label for="macchiato-observacoes">Observações:</label>
-                                <textarea id="macchiato-observacoes" rows="4"></textarea>
+                                <label for="cappuccino-observacoes">Observações:</label>
+                                <textarea id="cappuccino-observacoes" rows="4"></textarea>
                             </div>
                             <a href="#" class="btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</a>
                         </div>
-                    </div>    
-                </div>
-                
-                <!-- Repita o código acima para cada item do cardápio -->
+                        
+                    </div> 
+                </div>       
             </div>
         </section>
 
@@ -96,11 +93,11 @@
 
             <div class="box">
                 <h3>links rápidos</h3>
-                <a href="#home"><i class="fas fa-arrow-right"></i> início</a>
-                <a href="#about"><i class="fas fa-arrow-right"></i> sobre</a>
-                <a href="#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
-                <a href="#review"><i class="fas fa-arrow-right"></i> avaliação</a>
-                <a href="#contact"><i class="fas fa-arrow-right"></i> contato</a> 
+                <a href="home_meu_cafe.html#home"><i class="fas fa-arrow-right"></i> início</a>
+                <a href="home_meu_cafe.html#about"><i class="fas fa-arrow-right"></i> sobre</a>
+                <a href="home_meu_cafe.html#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
+                <a href="home_meu_cafe.html#review"><i class="fas fa-arrow-right"></i> avaliação</a>
+                <a href="home_meu_cafe.html#contact"><i class="fas fa-arrow-right"></i> contato</a> 
                
             </div>
 
@@ -117,7 +114,7 @@
                 <a href="https://www.facebook.com/" target="_blank" rel="external"><i class="fab fa-facebook-f"></i> facebook</a>
                 <a href="https://www.instagram.com/" target="_blank" rel="external"><i class="fab fa-instagram"></i> instagram</a>
                 <a href="https://www.linkedin.com/" target="_blank" rel="external"><i class="fab fa-linkedin"></i> linkedin</a>
-                <a href="https://www.linkedin.com/" target="_blank" rel="external"><i class="fab fa-twitter"></i> twitter</a>
+                <a href="https://x.com/" target="_blank" rel="external"><i class="fa-brands fa-x-twitter"></i> X-twitter</a>
             </div>
         </div>
     </section>
@@ -126,8 +123,11 @@
     <!-- SWIPER -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
+    <!-- ICON -->
+    <script src="https://kit.fontawesome.com/e71e837184.js" crossorigin="anonymous"></script>
+
     <!-- Link do Arquivo JS Personalizado  -->
-    <script src="../js/script_macchiato.js"></script> 
+    <script src="../static/js/script_cappuccino_italiano.js"></script> 
 
     
 </body>
