@@ -52,28 +52,51 @@
       <!-- CARRINHO DE COMPRAS -->
       <!-- <div class="page-title">Seu Carrinho</div> -->
       <h1 class="page-title"><span>Seu</span>Carrinho</h1>
+      <div class="conteudo">
+        <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Produto</th>
+                <th>Tipo de Café</th>
+                <th>Tipo de Leite</th>
+                <th>Observação</th>
+                <th>Preço Unitário R$</th>
+                <th>Quantidade</th>
+                <th>Total R$</th>
+              </tr>
+            </thead>
+            <tbody id="carrinho">
+              <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
+            </tbody>
+        </table>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Produto</th>
-            <th>Tipo de Café</th>
-            <th>Tipo de Leite</th>
-            <th>Observação</th>
-            <th>Preço Unitário R$</th>
-            <th>Quantidade</th>
-            <th>Total R$</th>
-          </tr>
-        </thead>
-        <tbody id="carrinho">
-          <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
-        </tbody>
-      </table>
-      <div class="total-container">
-        <h3>Total:</h3>
-        <span id="total"></span>
-      </div>
-      <button id="concluirCompraBtn" class="btn-concluir">Concluir Compra</button>
+          <aside>
+            <div class="box">
+              <header>Resumo da compra</header>
+              <div class="info">
+                <div><span>Sub-total R$</span><span id="sub-total"></span></div>
+                <div><span>Frete</span><span>Gratuito</span></div>
+              </div>
+              <footer>
+                <span>Total R$</span>
+                <span id="total"></span>
+              </footer>
+            </div>
+            
+            <!-- <a href="./home_meu_cafe.html#home"><button>Continuar Compra</button></a> -->
+            <div class="button-container">
+              <a href="./home_meu_cafe.html#menu"><button id="continuarCompraBtn" class="btn-continuar">Continuar Compra</button></a>
+              <button id="esvaziarCarrinhoBtn" class="btn-esvaziar">Esvaziar Carrinho</button>
+            </div>
+
+            <br>
+            <!-- <a href="./compra_concluida.html"><button>Finalizar Compra</button></a> -->
+            <a href="./compra_concluida.html"><button id="concluirCompraBtn" class="btn-concluir">Finalizar Compra</button></a>
+
+          </aside>
+        </div>
+
+        
     </main>
 
       

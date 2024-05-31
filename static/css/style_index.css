@@ -1,4 +1,8 @@
 /* style_index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+/* ESTILOS GERAIS */
 :root {
     --main-color: #443;
     --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
@@ -71,14 +75,13 @@ header {
     z-index: 1000;
     background: #fff;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    padding: 20px;
+    padding: 2rem 9%;
 }
 
-/* Estilos da navbar */
 header .navbar {
     display: flex;
-    justify-content: center; /* Alinhe os itens horizontalmente ao centro */
-    align-items: center; /* Alinhe os itens verticalmente ao centro */
+    justify-content: center;
+    align-items: center; 
     position: fixed;
     top: 0;
     left: 0;
@@ -86,17 +89,18 @@ header .navbar {
     background: #fff;
     z-index: 999;
     transition: top 0.3s ease;
+    min-height:max-content;
+    
 }
 
-/* Estilo para os links do menu */
 header .navbar a {
     color: black;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 7px;
     font-size: 18px;
     text-align: center; 
-    white-space: nowrap; /* Evita quebra de linha */
-    line-height: 4rem; /* Define a altura da linha igual à altura do menu */
+    white-space: nowrap; 
+    line-height: 8rem; 
 }
 
 header .navbar a:hover {
@@ -105,19 +109,18 @@ header .navbar a:hover {
 
 /* Estilo para o botão do menu de hambúrguer */
 #menu-btn {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: black;
     cursor: pointer;
-    /* margin-right: auto; Adiciona margem à direita para posicionar o botão do menu à esquerda */
     /* display: none;  */
     position: absolute;
     left: 20px;
-    top: 20px;
+    top: 5px;
 
 }
 
 .home {
-    min-height: 100vh;
+    min-height: 101vh;
     background: url(../image/banner_home_tamanho-1677x750.jpg) no-repeat;
     background-position: center;
     background-size: contain;
@@ -149,11 +152,11 @@ body {
 }
 
 .home .content h1 {
-    font-size: 3rem; /* Reduz o tamanho da fonte do título na seção home */
+    font-size: 3rem; 
 }
 
 .home .content h2 {
-    font-size: 2rem; /* Reduz o tamanho da fonte do subtítulo na seção home */
+    font-size: 2rem; 
 }
 
 h1, h2, h4, p, li {
@@ -209,16 +212,19 @@ table {
     border-color: darkblue;
     margin-bottom: 20px;
     background-color: white;
+    font-size: 16px;
 }
 
-th, td {
-    font-size: 16px;
+th,td {
+    /* font-size: 16px; */
     padding: 8px;
     border: 1px solid #ccc;
 }
 
-/* Estilos para telas menores */
-@media (max-width: 768px) {
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1114px) {
     .heading {
         font-size: 4rem; /* Reduz o tamanho da fonte do título */
     }
@@ -257,48 +263,27 @@ th, td {
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: clip-path 0.3s ease;
         align-items: flex-start; /* Alinha os itens à esquerda */
+        flex-direction: column;
     }
 
     /* Alterar a posição da navbar quando estiver ativa (aberta) */
     header .navbar.active {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-
-    /* Alinhar o texto do menu à esquerda */
-    header .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
 
-/* Estilos para telas maiores */
-@media (min-width: 769px) {
-    /* Mostrar a navbar em telas maiores */
+@media (min-width: 1115px) {
+   
     header .navbar {
         display: flex;
     }
-
-    /* Ocultar o botão do menu de hambúrguer em telas maiores */
+  
     #menu-btn {
         display: none;
     }
+
 }
 
-@media (max-width: 991px) {
-    html {
-        font-size: 55%;
-    }
-
-    header {
-        padding: 3rem;
-    }
-
-    section {
-        padding: 2rem;
-    }
-
-    
-}
 
 @media (max-width: 450px) {
     .heading {
@@ -310,10 +295,6 @@ th, td {
         padding: .5rem 1rem; /* Reduz ainda mais o preenchimento dos botões para telas menores */
     }
 
-    table {
-        font-size: 12px; /* Reduz ainda mais o tamanho da fonte da tabela para telas menores */
-    }
-
     .home .content h1 {
         font-size: 2rem; /* Reduz ainda mais o tamanho da fonte do título na seção home para telas menores */
     }
@@ -322,6 +303,21 @@ th, td {
         font-size: 1.5rem; /* Reduz ainda mais o tamanho da fonte do subtítulo na seção home para telas menores */
     }
 
+
+    h1, h2, p, ul, ol {
+        margin-bottom: 8px;
+        margin: 8px;
+    }
+    
+    a {
+        font-size: 1.8rem;
+    }
+    
+    h4 {
+        margin-bottom: 3px;
+        margin: 3px;
+    }
+   
     section {
         padding: 1rem;
     }
@@ -333,5 +329,18 @@ th, td {
     .home .image img {
         height: auto;
         width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 8px; 
+        margin-bottom: 10px;
+    }
+
+    th, td {
+        white-space: nowrap;
+        padding: 4px;
     }
 }

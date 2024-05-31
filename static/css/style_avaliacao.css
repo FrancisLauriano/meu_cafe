@@ -1,6 +1,8 @@
 /* style_avaliacao.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+
+/* ESTILOS GERAIS */
 :root {
     --main-color: #443;
     --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
@@ -117,26 +119,26 @@ section {
 }
 
 
-/* ICONE PESQUISA E COMPRA */
+/* ICONE PESQUISA E ICONE CARRINHO DE COMPRA */
 .icon-large {
-    font-size: 24px; /* ou o tamanho desejado */
-    color: black; /* Define a cor inicial dos ícones como preto */
+    font-size: 24px;
+    color: black; 
 }
 
 .icon-large:hover {
-    color:  #fc5404; /* Altera a cor para laranja quando o mouse passa sobre os ícones */
+    color:  #fc5404; 
 }
 
 
 /* HOME */
 .home .btn {
-    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #fc5404; 
+    color: #fff; 
 }
 
 .home .btn:hover {
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #fc5404; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #fc5404; 
 }
 
 .home {
@@ -205,7 +207,7 @@ section {
 
 
 
-/* css - AVALIAÇÃO */
+/* AVALIAÇÃO REGISTRO - ESTILOS ESPECIFICOS DA PAGINA */
 .review  {
     display: flex;
     flex-direction: column;
@@ -249,7 +251,6 @@ section {
     
 }
 
-
 .sub-titulo {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -269,12 +270,11 @@ section {
     justify-content: center;
 }
 
-
 .star-icon {
    list-style: none;
    border: none;
    cursor: pointer;
-   color: gold; /* Cor das estrelas selecionadas */
+   color: gold; 
 }
 
 .star-icon::before {
@@ -286,11 +286,9 @@ section {
     color: gold; 
 }
  
-
 .star-icon.ativo ~ .star-icon::before {
    content: "\2606";
 }  
-
 
 .avaliacao:hover .star-icon::before {
     content: "\2605";
@@ -299,8 +297,6 @@ section {
 .star-icon:hover ~ .star-icon::before {
     content: "\2606";
 }  
-
- 
 
 .formulario {
     display: flex;
@@ -349,7 +345,7 @@ section {
 }
 
 .formulario form .btn.view-more {
-    text-align: center; /* texto alinhado no centro*/
+    text-align: center; 
     display: inline-block;
     border: .2rem solid var(--main-color);
     outline: none;
@@ -365,7 +361,6 @@ section {
     margin-right: 89px;
 }
 
-
 .formulario form .btn.view-more:hover {
     background-color: #fff;
     border-radius: 4% 95% 6% 95% / 95% 4% 92% 5%;
@@ -373,24 +368,22 @@ section {
     color: #fc5404;
 }
 
-
-
  
-/* Obrigado */
+/* AVALIAÇÃO CONCLUIDA - ESTILOS ESPECIFICOS DA PAGINA */
 .review .btn{
     margin-top: 10rem; 
     padding: .5rem 1rem;
     margin-right: auto;
-    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #fc5404; 
+    color: #fff; 
 }
 
 .review .btn:hover{
     margin-top: 10rem; 
     padding: .5rem 1rem;
     margin-right: auto;
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #fc5404; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #fc5404; 
 }
 
 .obrigado {
@@ -437,7 +430,6 @@ section {
     color: var(--main-color);
 }
 
-
 .footer .box-container .box a {
     display: block;
     font-size: 1.5rem;
@@ -450,10 +442,8 @@ section {
     color: #ff5722;
 }
 
-
 .footer .box-container .box a i {
-    padding-right: .5rem;
-    
+    padding-right: .5rem;   
 }
 
 .footer .box-container .box a:hover i {

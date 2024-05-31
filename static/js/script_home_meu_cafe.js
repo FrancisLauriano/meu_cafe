@@ -12,8 +12,6 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-
-
 document.querySelectorAll('.image-slider img').forEach(images => {
     images.onclick = () => {
         var src = images.getAttribute('src');

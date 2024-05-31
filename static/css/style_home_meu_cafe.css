@@ -1,6 +1,8 @@
 /* style_home_meu_cafe.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+
+/* ESTILOS GERAIS */
 :root {
     --main-color: #443;
     --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
@@ -117,26 +119,26 @@ section {
 }
 
 
-/* ICONE PESQUISA E COMPRA */
+/* ICONE PESQUISA E ICONE CARRINHO DE COMPRA */
 .icon-large {
-    font-size: 24px; /* ou o tamanho desejado */
-    color: black; /* Define a cor inicial dos ícones como preto */
+    font-size: 24px; 
+    color: black; 
 }
 
 .icon-large:hover {
-    color:  #fc5404; /* Altera a cor para laranja quando o mouse passa sobre os ícones */
+    color:  #fc5404;
 }
 
 
 /* HOME */
 .home .btn {
-    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #fc5404;
+    color: #fff; 
 }
 
 .home .btn:hover {
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #fc5404; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #fc5404; 
 }
 
 .home {
@@ -206,13 +208,13 @@ section {
 
 /* ABOUT */
 .about .btn {
-    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #fc5404; 
+    color: #fff; 
 }
 
 .about .btn:hover {
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #fc5404; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #fc5404; 
 }
 
 .about .row {
@@ -314,7 +316,6 @@ section {
     background-color: #556b2f;
 }
 
-
 .menu .box-container .box:hover {
     border: var(--border-hover);
     border-radius: var(--border-radius-hover);
@@ -348,26 +349,25 @@ section {
 .menu .box-container .box:hover .content h3,
 .menu .box-container .box:hover .content p,
 .menu .box-container .box:hover .content span {
-    color: #556b2f; /* Altera a cor do texto para verde ao passar o mouse sobre a caixa */
+    color: #556b2f; 
 }
 
 .menu .btn.view-more {
-    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #fc5404; 
+    color: #fff; 
 }
 
 .menu .btn.view-more:hover {
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #fc5404; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #fc5404; 
 }
 
 .view-more-container {
     display: flex;
-    justify-content: center; /* Alinha horizontalmente */
-    align-items: center; /* Alinha verticalmente */
-    margin-top: 2rem; /* Adiciona um espaçamento entre o view-more-container e a paginação */
+    justify-content: center; 
+    align-items: center;
+    margin-top: 2rem; 
 }
-
 
 
 /* REVIEW */
@@ -377,10 +377,6 @@ section {
     flex-direction: column;
     align-items: center;
 }
-
-/* .view-more-container {
-    margin-top: 2rem; /* Adiciona um espaçamento entre o view-more-container e a paginação */
-/*} */
 
 .review .review-slider .box {
     border: var(--border);
@@ -462,27 +458,25 @@ section {
 }
 
 .review .btn.view-more {
-    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #fc5404; 
+    color: #fff; 
 }
 
 .review .btn.view-more:hover {
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #fc5404; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #fc5404; 
 }
-
-
 
 
 /* CONTACT */
 .contact .btn {
-    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #fc5404; 
+    color: #fff; 
 }
 
 .contact .btn:hover {
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #fc5404; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #fc5404; 
 }
 
 .contact {
@@ -523,14 +517,14 @@ section {
 .contact .row {
     display: flex;
     background: var(--black);
-    flex-wrap: wrap-reverse; /* Altera a ordem dos elementos para que o formulário fique à direita */
+    flex-wrap: wrap-reverse; 
     gap: 1rem;
 }
 
 .contact .row .map,
 .contact .row form {
-    flex: 1; /* Ambos ocupam a mesma largura */
-    height: 100%; /* Garante que ocupem toda a altura disponível */
+    flex: 1; 
+    height: 100%; 
 }
 
 .contact .row .map {
@@ -538,9 +532,9 @@ section {
 }
 
 .contact .row form {
-    padding: 5rem 2rem; /* Altere o preenchimento conforme necessário */
+    padding: 5rem 2rem; 
     text-align: center;
-    width: 100%; /* Garante que ocupe toda a largura disponível */
+    width: 100%; 
 }
 
 .contact .row form h3 {
@@ -588,7 +582,6 @@ section {
     color: var(--main-color);
 }
 
-
 .footer .box-container .box a {
     display: block;
     font-size: 1.5rem;
@@ -600,15 +593,13 @@ section {
     color: #ff5722;
 }
 
-
 .footer .box-container .box a i {
     padding-right: .5rem;
 }
 
 .footer .box-container .box a:hover i {
     padding-right: 2rem;
-    color: #ff5722;
-    
+    color: #ff5722;    
 }
 
 .footer .credit {

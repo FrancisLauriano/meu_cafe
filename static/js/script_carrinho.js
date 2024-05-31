@@ -72,7 +72,10 @@ window.onload = function() {
 
         total += item.preco * item.quantidade;
     });
+    document.getElementById('sub-total').textContent = 'R$ ' + total.toFixed(2);
+
     document.getElementById('total').textContent = 'R$ ' + total.toFixed(2);
+    
 };
 
 function preencherCamposCappuccino(item) {
@@ -117,9 +120,7 @@ function preencherCamposMoka(item) {
     document.getElementById('moka-observacoes').value = item.observacoes;
 }
 
-function adicionarAoCarrinho() {
-    // Implemente a lógica para adicionar o produto ao carrinho
-}
+
 
 function removerItem(index) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -153,8 +154,30 @@ function removerItem(index) {
         `;
         total += item.preco * item.quantidade;
     });
+    document.getElementById('sub-total').textContent = 'R$ ' + total.toFixed(2);
+
     document.getElementById('total').textContent = 'R$ ' + total.toFixed(2);
 }
+
+
+
+// Função para esvaziar o carrinho
+function esvaziarCarrinho() {
+    localStorage.removeItem('carrinho'); // Remove o carrinho do armazenamento local
+    
+    // Atualiza a exibição do carrinho na página
+    let carrinhoDiv = document.getElementById('carrinho');
+    carrinhoDiv.innerHTML = ''; // Limpa a tabela
+    
+    // Atualiza o resumo da compra
+    document.getElementById('sub-total').textContent = 'R$ 0.00';
+    document.getElementById('total').textContent = 'R$ 0.00';
+}
+
+// Vincular o evento de clique ao botão "Esvaziar Carrinho"
+document.getElementById('esvaziarCarrinhoBtn').addEventListener('click', esvaziarCarrinho);
+
+
 
 function editarItem(index) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -186,7 +209,10 @@ function editarItem(index) {
 
 function concluirCompra() {
     // Implemente a lógica para concluir a compra aqui
+    localStorage.removeItem('carrinho'); // Remove o carrinho do armazenamento local
+   
 }
 
-
+// Vincular o evento de clique ao botão "Esvaziar Carrinho"
+document.getElementById('concluirCompraBtn').addEventListener('click', concluirCompra);
 

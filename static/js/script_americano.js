@@ -18,7 +18,6 @@ window.onload = function() {
             // Preenche os campos da página com os detalhes do produto
             document.getElementById('americano-quantidade').value = produto.quantidade;
             document.getElementById('americano-tipo').value = produto.cafe;
-            // document.getElementById('americano-leite').value = produto.leite;
             document.getElementById('americano-observacoes').value = produto.observacoes;
         } else {
             console.error("Índice de produto inválido.");
@@ -43,9 +42,8 @@ function adicionarAoCarrinho() {
         cafe: tipoCafe,
         leite: tipoLeite,
         observacoes: observacoes,
-        imagem: "../static/image/menu-4.png" // Aqui você pode adicionar a URL da imagem correspondente ao produto
+        imagem: "../static/image/menu-4.png" 
     };
-    // "../image/menu-4.png"
     
     // Obtém o carrinho do armazenamento local
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -68,10 +66,6 @@ function adicionarAoCarrinho() {
     // Redireciona para a página do carrinho
     window.location.href = "carrinho.html";
 }
-
-
-
-
 
 function increaseQuantity(elementId) {
     var inputElement = document.getElementById(elementId);

@@ -1,6 +1,8 @@
 /* style_compra.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+
+/* ESTILOS GERAIS */
 :root {
     --main-color: #443;
     --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
@@ -119,26 +121,26 @@ section {
 }
 
 
-/* ICONE PESQUISA E COMPRA */
+/* ICONE PESQUISA E ICONE CARRINHO DE COMPRA */
 .icon-large {
-    font-size: 24px; /* ou o tamanho desejado */
-    color: black; /* Define a cor inicial dos ícones como preto */
+    font-size: 24px; 
+    color: black; 
 }
 
 .icon-large:hover {
-    color:  #fc5404; /* Altera a cor para laranja quando o mouse passa sobre os ícones */
+    color:  #fc5404; 
 }
 
 
 /* HOME */
 .home .btn {
-    background-color:  #fc5404; /* Define a cor de fundo da caixa como laranja escuro */
-    color: #fff; /* Define a cor do texto como branco */
+    background-color:  #fc5404; 
+    color: #fff; 
 }
 
 .home .btn:hover {
-    background-color: #fff; /* Define a cor de fundo da caixa como branco */
-    color: #fc5404; /* Define a cor do texto como laranja */
+    background-color: #fff; 
+    color: #fc5404; 
 }
 
 .home {
@@ -207,13 +209,7 @@ section {
 
 
 
-/* COMPRA */
-/* .compra {
-    background: url(../image/menu-bg.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-} */
-
+/* COMPRA - ESTILOS ESPECIFICOS DA PAGINA */
 .compra .box-container {
     padding-top: 10rem;
     display: flex;
@@ -232,13 +228,6 @@ section {
     margin-left: 6rem;
     background-color: #556b2f;
 }
-
-
-/* .compra .box-container .box:hover {
-    border: var(--border-hover);
-    border-radius: var(--border-radius-hover);
-    background-color: #fff;
-} */
 
 .compra .box-container .box img {
     height: 8rem;
@@ -307,7 +296,6 @@ section {
     
 }
 
-
 .compra .box-container .box .content textarea {
     border: var(--border);
     border-radius: var(--border-radius);
@@ -317,6 +305,7 @@ section {
     max-width: 250px;
     min-height: 100px;
     max-height: 100px; 
+    padding: 5px 12px;
 }
 
 .compra .box-container .box .content select:hover {
@@ -328,12 +317,6 @@ section {
     border: var(--border-hover);
     border-radius: var(--border-radius-hover);
 }
-
-/* .menu .box-container .box:hover .content h3,
-.menu .box-container .box:hover .content p,
-.menu .box-container .box:hover .content span { */
-    /* color: #556b2f;  Altera a cor do texto para verde ao passar o mouse sobre a caixa 
-} */
 
 .compra .btn {
     background-color:  #0f2310; 
@@ -350,9 +333,9 @@ section {
 
 .view-more-container {
     display: flex;
-    justify-content: center; /* Alinha horizontalmente */
-    align-items: center; /* Alinha verticalmente */
-    margin-top: 2rem; /* Adiciona um espaçamento entre o view-more-container e a paginação */
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 2rem; 
 }
 
 
