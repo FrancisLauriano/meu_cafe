@@ -120,8 +120,6 @@ function preencherCamposMoka(item) {
     document.getElementById('moka-observacoes').value = item.observacoes;
 }
 
-
-
 function removerItem(index) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     carrinho.splice(index, 1); // Remove o item do carrinho
@@ -160,7 +158,6 @@ function removerItem(index) {
 }
 
 
-
 // Função para esvaziar o carrinho
 function esvaziarCarrinho() {
     localStorage.removeItem('carrinho'); // Remove o carrinho do armazenamento local
@@ -177,30 +174,28 @@ function esvaziarCarrinho() {
 // Vincular o evento de clique ao botão "Esvaziar Carrinho"
 document.getElementById('esvaziarCarrinhoBtn').addEventListener('click', esvaziarCarrinho);
 
-
-
 function editarItem(index) {
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     let item = carrinho[index];
     switch (item.nome) {
         case "Cappuccino Italiano":
             // Adiciona o parâmetro 'editar' na URL para indicar que estamos editando o produto
-            window.location.href = `cappuccino_italiano.html?editar=${index}`;
+            window.location.href = `${urls.cappuccino_italiano}?editar=${index}`;
             break;
         case "Espresso":
-            window.location.href = `espresso.html?editar=${index}`;
+            window.location.href = `${urls.espresso}?editar=${index}`;
             break;
         case "Macchiato":
-            window.location.href = `macchiato.html?editar=${index}`;
+            window.location.href = `${urls.macchiato}?editar=${index}`;
             break;
         case "Americano":
-            window.location.href = `americano.html?editar=${index}`;
+            window.location.href = `${urls.americano}?editar=${index}`;
             break;
         case "Latte":
-            window.location.href = `latte.html?editar=${index}`;
+            window.location.href = `${urls.latte}?editar=${index}`;
             break;
         case "Moka":
-            window.location.href = `moka.html?editar=${index}`;
+            window.location.href = `${urls.moka}?editar=${index}`;
             break;
         default:
             console.error("Produto não encontrado.");
@@ -208,9 +203,8 @@ function editarItem(index) {
 }
 
 function concluirCompra() {
-    // Implemente a lógica para concluir a compra aqui
-    localStorage.removeItem('carrinho'); // Remove o carrinho do armazenamento local
-   
+    // lógica para concluir a compra aqui
+    localStorage.removeItem('carrinho'); // Remove o carrinho do armazenamento local 
 }
 
 // Vincular o evento de clique ao botão "Esvaziar Carrinho"

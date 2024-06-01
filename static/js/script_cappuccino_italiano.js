@@ -26,7 +26,7 @@ window.onload = function() {
     }
 };
 
-function adicionarAoCarrinho() {
+function adicionarAoCarrinho(carrinhoUrl) {
     // Captura informações do produto
     const nomeProduto = "Cappuccino Italiano";
     const valorProduto = 8.99;
@@ -66,7 +66,7 @@ function adicionarAoCarrinho() {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
     // Redireciona para a página do carrinho
-    window.location.href = "carrinho.html";
+    window.location.href = carrinhoUrl;
 }
 
 function increaseQuantity(elementId) {
@@ -82,7 +82,3 @@ function decreaseQuantity(elementId) {
         inputElement.value = currentValue - 1;
     }
 }
-
-
-
-

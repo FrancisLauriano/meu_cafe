@@ -1,4 +1,4 @@
- <!-- index.html -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -15,7 +15,7 @@
     <!-- Font Awesome CDN Link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
-    <link rel="stylesheet" type="text/css" href="./static/css/style_index.css"> 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_index.css') }}">
 </head>
 
 <body>
@@ -161,7 +161,7 @@
                     Para acessar o projeto "Meu Café" clique no botão abaixo: 
                 </p></dd>
             </dl>
-            <a href="./templates/home_meu_cafe.html" target="_blank" rel="external" class="btn">Meu Café</a>
+            <a href="{{ url_for('home_meu_cafe') }}" target="_blank" rel="external" class="btn">Meu Café</a>
         </section>
 
         <section class="referencias" id="referencias">
@@ -200,7 +200,7 @@
     <script src="https://kit.fontawesome.com/e71e837184.js" crossorigin="anonymous"></script>
 
     <!-- Link do Arquivo JS Personalizado  -->
-    <script src="./static/js/script_index.js"></script> 
+    <script src="{{ url_for('static', filename='js/script_index.js') }}"></script>
 </body>
 </html>
 

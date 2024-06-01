@@ -1,148 +1,146 @@
 <!-- carrinho.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Meu Café</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="../static/image/icon_cafe.ico" type="image/x-icon"> 
-   
-    <!-- SWIPER -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <title>Meu Café</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
-
-    <!-- Font Awesome CDN Link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Link do Arquivo CSS Personalizado  -->
-    <link rel="stylesheet" href="../static/css/style_carrinho.css">
-    
-
-  </head>
-  <body>
-        <header class="header">
-          <div id="menu-btn" class="fas fa-bars"></div>
-          
-          <span><a href="home_meu_cafe.html" class="logo">meu café<i class="fas fa-mug-hot"></i></a></span>
-          
-
-          
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="../static/image/icon_cafe.ico" type="image/x-icon"> 
   
-          <nav class="navbar">
-            <a href="home_meu_cafe.html#home">início</a>
-            <a href="home_meu_cafe.html#about">sobre</a>
-            <a href="home_meu_cafe.html#menu">cardápio</a>
-            <a href="home_meu_cafe.html#review">avaliação</a>
-            <a href="home_meu_cafe.html#contact">contato</a>
-              
-          </nav>
-          <div class="icons">
-              <a href="#" class="search-icon"><i class="fas fa-search icon-large"></i></a>
-              <a href="carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+
+  <!-- Font Awesome CDN Link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Link do Arquivo CSS Personalizado  -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_carrinho.css') }}">
+
+  <script>
+      const urls = {
+          cappuccino_italiano: "{{ url_for('cappuccino_italiano') }}",
+          espresso: "{{ url_for('espresso') }}",
+          macchiato: "{{ url_for('macchiato') }}",
+          americano: "{{ url_for('americano') }}",
+          latte: "{{ url_for('latte') }}",
+          moka: "{{ url_for('moka') }}"
+      };
+  </script>
+</head>
   
-          </div>
-      </header>
-
-    <main>
-      <!-- CARRINHO DE COMPRAS -->
-      <!-- <div class="page-title">Seu Carrinho</div> -->
-      <h1 class="page-title"><span>Seu</span>Carrinho</h1>
-      <div class="conteudo">
-        <table class="custom-table">
-            <thead>
-              <tr>
-                <th>Produto</th>
-                <th>Tipo de Café</th>
-                <th>Tipo de Leite</th>
-                <th>Observação</th>
-                <th>Preço Unitário R$</th>
-                <th>Quantidade</th>
-                <th>Total R$</th>
-              </tr>
-            </thead>
-            <tbody id="carrinho">
-              <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
-            </tbody>
-        </table>
-
-          <aside>
-            <div class="box">
-              <header>Resumo da compra</header>
-              <div class="info">
-                <div><span>Sub-total R$</span><span id="sub-total"></span></div>
-                <div><span>Frete</span><span>Gratuito</span></div>
-              </div>
-              <footer>
-                <span>Total R$</span>
-                <span id="total"></span>
-              </footer>
-            </div>
-            
-            <!-- <a href="./home_meu_cafe.html#home"><button>Continuar Compra</button></a> -->
-            <div class="button-container">
-              <a href="./home_meu_cafe.html#menu"><button id="continuarCompraBtn" class="btn-continuar">Continuar Compra</button></a>
-              <button id="esvaziarCarrinhoBtn" class="btn-esvaziar">Esvaziar Carrinho</button>
-            </div>
-
-            <br>
-            <!-- <a href="./compra_concluida.html"><button>Finalizar Compra</button></a> -->
-            <a href="./compra_concluida.html"><button id="concluirCompraBtn" class="btn-concluir">Finalizar Compra</button></a>
-
-          </aside>
-        </div>
-
+<body>
+      <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
         
-    </main>
-
-      
-      <section class="footer">
-        <div class="box-container">
-
-          <div class="box">
-            <h3>links rápidos</h3>
-            <a href="home_meu_cafe.html#home"><i class="fas fa-arrow-right"></i> início</a>
-            <a href="home_meu_cafe.html#about"><i class="fas fa-arrow-right"></i> sobre</a>
-            <a href="home_meu_cafe.html#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
-            <a href="home_meu_cafe.html#review"><i class="fas fa-arrow-right"></i> avaliação</a>
-            <a href="home_meu_cafe.html#contact"><i class="fas fa-arrow-right"></i> contato</a> 
-           
+        <span><a href="{{ url_for('home_meu_cafe') }}" class="logo">meu café<i class="fas fa-mug-hot"></i></a></span>
+        
+        <nav class="navbar">
+          <a href="{{ url_for('home_meu_cafe') }}#home">início</a>
+          <a href="{{ url_for('home_meu_cafe') }}#about">sobre</a>
+          <a href="{{ url_for('home_meu_cafe') }}#menu">cardápio</a>
+          <a href="{{ url_for('home_meu_cafe') }}#review">avaliação</a>
+          <a href="{{ url_for('home_meu_cafe') }}#contact">contato</a>  
+        </nav>
+        <div class="icons">
+            <a href="#" class="search-icon"><i class="fas fa-search icon-large"></i></a>
+            <a href="{{ url_for('carrinho') }}" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
         </div>
+    </header>
 
+  <main>
+    <!-- CARRINHO DE COMPRAS -->
+    <!-- <div class="page-title">Seu Carrinho</div> -->
+    <h1 class="page-title"><span>Seu</span>Carrinho</h1>
+    <div class="conteudo">
+      <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Tipo de Café</th>
+              <th>Tipo de Leite</th>
+              <th>Observação</th>
+              <th>Preço Unitário R$</th>
+              <th>Quantidade</th>
+              <th>Total R$</th>
+            </tr>
+          </thead>
+          <tbody id="carrinho">
+            <!-- Os itens do carrinho serão inseridos aqui dinamicamente -->
+          </tbody>
+      </table>
+
+        <aside>
           <div class="box">
-            <h3>informações de contato</h3>
-            <a href="#"><i class="fas fa-phone"></i> (81)99999-9999</a>
-            <a href="#"><i class="fas fa-phone"></i> (81)2222-3333</a>
-            <a href="#"><i class="fas fa-envelope"></i> meucafe@email.com</a>
-            <a href="#"><i class="fas fa-envelope"></i> Rua Jean Emile Favre-<br>Imbiribeira, Recife - PE, 51150-000</a>
-          </div>   
-
-            <div class="box">
-              <h3>informações de contato</h3>
-              <a href="https://www.facebook.com/" target="_blank" rel="external"><i class="fab fa-facebook-f"></i> facebook</a>
-              <a href="https://www.instagram.com/" target="_blank" rel="external"><i class="fab fa-instagram"></i> instagram</a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="external"><i class="fab fa-linkedin"></i> linkedin</a>
-              <a href="https://x.com/" target="_blank" rel="external"><i class="fa-brands fa-x-twitter"></i> X-twitter</a>
+            <header>Resumo da compra</header>
+            <div class="info">
+              <div><span>Sub-total R$</span><span id="sub-total"></span></div>
+              <div><span>Frete</span><span>Gratuito</span></div>
+            </div>
+            <footer>
+              <span>Total R$</span>
+              <span id="total"></span>
+            </footer>
           </div>
+          
+          <!-- <a href="./home_meu_cafe.html#home"><button>Continuar Compra</button></a> -->
+          <div class="button-container">
+            <a href="{{ url_for('home_meu_cafe') }}#menu"><button id="continuarCompraBtn" class="btn-continuar">Continuar Compra</button></a>
+            <button id="esvaziarCarrinhoBtn" class="btn-esvaziar">Esvaziar Carrinho</button>
+          </div>
+
+          <br>
+          <!-- <a href="./compra_concluida.html"><button>Finalizar Compra</button></a> -->
+          <a href="{{ url_for('compra_concluida') }}"><button id="concluirCompraBtn" class="btn-concluir">Finalizar Compra</button></a>
+        </aside>
+      </div>
+  </main>
+
+    <section class="footer">
+      <div class="box-container">
+
+        <div class="box">
+          <h3>links rápidos</h3>
+          <a href="{{ url_for('home_meu_cafe') }}#home"><i class="fas fa-arrow-right"></i> início</a>
+          <a href="{{ url_for('home_meu_cafe') }}#about"><i class="fas fa-arrow-right"></i> sobre</a>
+          <a href="{{ url_for('home_meu_cafe') }}#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
+          <a href="{{ url_for('home_meu_cafe') }}#review"><i class="fas fa-arrow-right"></i> avaliação</a>
+          <a href="{{ url_for('home_meu_cafe') }}#contact"><i class="fas fa-arrow-right"></i> contato</a>   
         </div>
 
+        <div class="box">
+          <h3>informações de contato</h3>
+          <a href="#"><i class="fas fa-phone"></i> (81)99999-9999</a>
+          <a href="#"><i class="fas fa-phone"></i> (81)2222-3333</a>
+          <a href="#"><i class="fas fa-envelope"></i> meucafe@email.com</a>
+          <a href="#"><i class="fas fa-envelope"></i> Rua Jean Emile Favre-<br>Imbiribeira, Recife - PE, 51150-000</a>
+        </div>   
+
+        <div class="box">
+          <h3>informações de contato</h3>
+          <a href="https://www.facebook.com/" target="_blank" rel="external"><i class="fab fa-facebook-f"></i> facebook</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="external"><i class="fab fa-instagram"></i> instagram</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="external"><i class="fab fa-linkedin"></i> linkedin</a>
+          <a href="https://x.com/" target="_blank" rel="external"><i class="fa-brands fa-x-twitter"></i> X-twitter</a>
+        </div>
+      </div>
     </section>
 
-      <!-- SWIPER -->
-      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-      <!-- ICON -->
-      <script src="https://kit.fontawesome.com/e71e837184.js" crossorigin="anonymous"></script>
+    <!-- ICON -->
+    <script src="https://kit.fontawesome.com/e71e837184.js" crossorigin="anonymous"></script>
 
-      <!-- Link do Arquivo JS Personalizado  -->
-      <script src="../static/js/script_carrinho.js"></script>
-
-    
-  </body>
+    <!-- Link do Arquivo JS Personalizado  -->
+    <script src="{{ url_for('static', filename='js/script_carrinho.js') }}"></script>   
+</body>
 </html>
 
 

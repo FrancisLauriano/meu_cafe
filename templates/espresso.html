@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Link do Arquivo CSS Personalizado  -->
-    <link rel="stylesheet" href="../static/css/style_compra.css">  
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_compra.css') }}">  
 </head>
 
 <body>
@@ -27,18 +27,18 @@
      <header class="header">
         <div id="menu-btn" class="fas fa-bars"></div>
 
-        <a href="home_meu_cafe.html" class="logo">meu café<i class="fas fa-mug-hot"></i></a>
+        <a href="{{ url_for('home_meu_cafe') }}" class="logo">meu café<i class="fas fa-mug-hot"></i></a>
 
         <nav class="navbar">
-            <a href="home_meu_cafe.html#home">início</a>
-            <a href="home_meu_cafe.html#about">sobre</a>
-            <a href="home_meu_cafe.html#menu">cardápio</a>
-            <a href="home_meu_cafe.html#review">avaliação</a>
-            <a href="home_meu_cafe.html#contact">contato</a>    
+            <a href="{{ url_for('home_meu_cafe') }}#home">início</a>
+            <a href="{{ url_for('home_meu_cafe') }}#about">sobre</a>
+            <a href="{{ url_for('home_meu_cafe') }}#menu">cardápio</a>
+            <a href="{{ url_for('home_meu_cafe') }}#review">avaliação</a>
+            <a href="{{ url_for('home_meu_cafe') }}#contact">contato</a>    
         </nav>
         <div class="icons">
             <a href="#" class="search-icon"><i class="fas fa-search icon-large"></i></a>
-            <a href="carrinho.html" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
+            <a href="{{ url_for('carrinho') }}" class="cart-icon"><i class="fas fa-shopping-cart icon-large"></i></a>
         </div>
     </header>
 
@@ -47,7 +47,7 @@
             <div class="box-container">  
                 <div class="box">    
                     <div class="item">
-                        <img src="../static/image/menu-2.png" alt="">
+                        <img src="{{ url_for('static', filename='image/menu-2.png') }}" alt="">
                         <div class="content">
                             <h3>Espresso</h3>
                             <p>Descrição: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, sed.</p>
@@ -68,7 +68,7 @@
                                 <label for="espresso-observacoes">Observações:</label>
                                 <textarea id="espresso-observacoes" rows="4"></textarea>
                             </div>
-                            <a href="#" class="btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</a>
+                            <a href="{{ url_for('carrinho') }}" class="btn" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</a>
                         </div>
                     </div>
                 </div>    
@@ -81,11 +81,12 @@
 
             <div class="box">
                 <h3>links rápidos</h3>
-                <a href="home_meu_cafe.html#home"><i class="fas fa-arrow-right"></i> início</a>
-                <a href="home_meu_cafe.html#about"><i class="fas fa-arrow-right"></i> sobre</a>
-                <a href="home_meu_cafe.html#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
-                <a href="home_meu_cafe.html#review"><i class="fas fa-arrow-right"></i> avaliação</a>
-                <a href="home_meu_cafe.html#contact"><i class="fas fa-arrow-right"></i> contato</a> 
+                <h3>links rápidos</h3>
+                <a href="{{ url_for('home_meu_cafe') }}#home"><i class="fas fa-arrow-right"></i> início</a>
+                <a href="{{ url_for('home_meu_cafe') }}#about"><i class="fas fa-arrow-right"></i> sobre</a>
+                <a href="{{ url_for('home_meu_cafe') }}#menu"><i class="fas fa-arrow-right"></i> cardápio</a>
+                <a href="{{ url_for('home_meu_cafe') }}#review"><i class="fas fa-arrow-right"></i> avaliação</a>
+                <a href="{{ url_for('home_meu_cafe') }}#contact"><i class="fas fa-arrow-right"></i> contato</a> 
             </div>
 
             <div class="box">
@@ -113,7 +114,7 @@
     <script src="https://kit.fontawesome.com/e71e837184.js" crossorigin="anonymous"></script>
 
     <!-- Link do Arquivo JS Personalizado  -->
-    <script src="../static/js/script_espresso.js"></script>    
+    <script src="{{ url_for('static', filename='js/script_espresso.js') }}"></script>    
 </body>
 </html>
 

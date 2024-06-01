@@ -25,7 +25,7 @@ window.onload = function() {
     }
 };
 
-function adicionarAoCarrinho() {
+function adicionarAoCarrinho(carrinhoUrl) {
     // Captura informações do produto
     const nomeProduto = "Americano";
     const valorProduto = 8.99;
@@ -42,8 +42,9 @@ function adicionarAoCarrinho() {
         cafe: tipoCafe,
         leite: tipoLeite,
         observacoes: observacoes,
-        imagem: "../static/image/menu-4.png" 
+        imagem: "../static/image/menu-1.png" 
     };
+
     
     // Obtém o carrinho do armazenamento local
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
@@ -64,8 +65,9 @@ function adicionarAoCarrinho() {
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
     // Redireciona para a página do carrinho
-    window.location.href = "carrinho.html";
+    window.location.href = carrinhoUrl;
 }
+
 
 function increaseQuantity(elementId) {
     var inputElement = document.getElementById(elementId);
