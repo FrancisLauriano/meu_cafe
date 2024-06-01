@@ -17,7 +17,7 @@ npm install
 
 ```bash
 # development
-npm start
+python -m flask run
 ```
 
 ## Prótotipo de baixa fidelidade do Projeto "Meu Café":
