@@ -10,7 +10,9 @@ Foi elaborado um web site para uma cafeteria fictícia chamada "Meu Café".
 ## Instalação das depedências
 
 ```bash
-npm install
+1. pip install -r requirements.txt
+
+2. npm install
 ```
 
 ## Executar app
@@ -18,6 +20,9 @@ npm install
 ```bash
 # development
 python -m flask run
+
+Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
 ```
 
 ## Prótotipo de baixa fidelidade do Projeto "Meu Café":
