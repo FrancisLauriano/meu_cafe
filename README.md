@@ -13,9 +13,11 @@ da cafeteria de forma intuitiva e acessível.
 ## Principais Recursos:
 
 ```bash
-1. Cardápio Eletrônico: Os clientes podem navegar pelo cardápio eletrônico completo da cafeteria, 
+###1. Cardápio Eletrônico: 
+Os clientes podem navegar pelo cardápio eletrônico completo da cafeteria, 
 que inclui uma variedade de bebidas. Cada item é acompanhado de descrições detalhadas e imagens.
-2. Pedido Online: A aplicação permite que os clientes façam pedidos diretamente através da 
+###2. Pedido Online: 
+A aplicação permite que os clientes façam pedidos diretamente através da 
 plataforma, selecionando os itens desejados, especificando as preferências e quantidades, e 
 finalizando a compra 
 de forma rápida e conveniente.
