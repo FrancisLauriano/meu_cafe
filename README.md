@@ -33,10 +33,12 @@ os clientes interessados em visitar ou entrar em contato com a cafeteria.
 ## Tecnologias Utilizadas:
 
 ```bash
-A aplicação web para a cafeteria "Meu Café" é desenvolvida utilizando uma combinação de tecnologias front-end e back-end.
+A aplicação web para a cafeteria "Meu Café" é desenvolvida utilizando uma combinação de tecnologias 
+front-end e back-end.
 
 1. HTML5, CSS3 e JavaScript para a interface do usuário e interatividade.
-2. Python através do framework para aplicações web, Flask, para processamento de pedidos e interações com o servidor.
+2. Python através do framework para aplicações web, Flask, para processamento de pedidos e interações
+com o servidor.
 
 ```
 
