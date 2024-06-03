@@ -4,7 +4,9 @@ Projeto de Web Site para uma cafeteria fictícia, "Meu Café", foi elaborado par
 ## Projeto "Meu Café" 
 
 ```bash
-A aplicação web é uma plataforma online projetada para oferecer uma experiência                              conveniente e envolvente aos clientes, permitindo que eles explorem os serviços,                       produtos e informações da cafeteria de forma intuitiva e acessível.
+A aplicação web é uma plataforma online projetada para oferecer uma experiência conveniente 
+e envolvente aos clientes, permitindo que eles explorem os serviços, produtos e informações 
+da cafeteria de forma intuitiva e acessível.
 
 ```
 
@@ -17,6 +19,7 @@ A aplicação web é uma plataforma online projetada para oferecer uma experiên
 4. Informações da Cafeteria: A seção de informações fornece detalhes úteis sobre a localização da cafeteria, horário de funcionamento, informações de contato e outras informações relevantes para os clientes interessados em visitar ou entrar em contato com a cafeteria.
 5. Integração com Redes Sociais: Os clientes podem compartilhar suas experiências na cafeteria "Meu Café" através das redes sociais, aumentando a visibilidade e o engajamento da marca.
 
+<<<<<<< HEAD
 ```
 
 ## Tecnologias Utilizadas:
@@ -27,6 +30,12 @@ A aplicação web para a cafeteria "Meu Café" é desenvolvida utilizando uma co
 1. HTML5, CSS3 e JavaScript para a interface do usuário e interatividade.
 2. Python através do framework para aplicações web, Flask, para processamento de pedidos e interações com o servidor.
 
+=======
+# Tecnologias Utilizadas:
+A aplicação web para a cafeteria "Meu Café" é desenvolvida utilizando uma combinação de tecnologias front-end e back-end.
+1. HTML5, CSS3 e JavaScript para a interface do usuário e interatividade.
+2. Python através do framework para aplicações web, Flask, para processamento de pedidos e interações com o servidor.
+>>>>>>> cc65d173d7b1ef3a2f7f89a2bbdc8707a218aae9
 ```
 
 ## Instalação das depedências
