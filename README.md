@@ -4,7 +4,7 @@ Projeto de Web Site para uma cafeteria fictícia, "Meu Café", foi elaborado par
 ## Projeto "Meu Café" 
 
 ```bash
-A aplicação web é uma plataforma online projetada para oferecer uma experiência conveniente e envolvente aos clientes, permitindo que eles explorem os serviços, produtos e informações da cafeteria de forma intuitiva e acessível.
+A aplicação web é uma plataforma online projetada para oferecer uma experiência                              conveniente e envolvente aos clientes, permitindo que eles explorem os serviços,                       produtos e informações da cafeteria de forma intuitiva e acessível.
 
 ```
 
