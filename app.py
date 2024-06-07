@@ -28,11 +28,6 @@ def avaliacao_concluida():
 def cappuccino_italiano():
     return render_template('cappuccino_italiano.html')
 
-@app.route('/meu_cafe/carrinho', methods=['GET'])
-def carrinho():
-    carrinho = session.get('carrinho', [])
-    return jsonify(carrinho)
-
 @app.route('/meu_cafe/carrinho_page')
 def carrinho_page():
     return render_template('carrinho.html')
@@ -58,6 +53,11 @@ def moka():
     return render_template('moka.html')
 
 # Rotas para manipulação do carrinho
+@app.route('/meu_cafe/carrinho', methods=['GET'])
+def carrinho():
+    carrinho = session.get('carrinho', [])
+    return jsonify(carrinho)
+
 @app.route('/adicionar_ao_carrinho', methods=['POST'])
 def adicionar_ao_carrinho():
     novo_item = request.json
