@@ -1,212 +1,178 @@
-// script_carrinho.js
 window.onload = function() {
-    // Verifica se há parâmetros na URL para determinar se o usuário está editando um produto
     const urlParams = new URLSearchParams(window.location.search);
     const editarIndex = urlParams.get('editar');
-    
-    if (editarIndex !== null) {
-        // Obtém o índice do produto a ser editado
-        const index = parseInt(editarIndex);
-        
-        // Obtém o carrinho do armazenamento local
-        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-        
-        // Verifica se o índice está dentro dos limites do carrinho
-        if (index >= 0 && index < carrinho.length) {
-            const produto = carrinho[index];
-            
-            // Preenche os campos da página com os detalhes do produto
-            switch (produto.nome) {
-                case "Cappuccino Italiano":
-                    preencherCamposCappuccino(produto);
-                    break;
-                case "Espresso":
-                    preencherCamposEspresso(produto);
-                    break;
-                case "Macchiato":
-                    preencherCamposMacchiato(produto);
-                    break;
-                case "Americano":
-                    preencherCamposAmericano(produto);
-                    break;
-                case "Latte":
-                    preencherCamposLatte(produto);
-                    break;
-                case "Moka":
-                    preencherCamposMoka(produto);
-                    break;
-                default:
-                    console.error("Produto não encontrado.");
-            }
-        } else {
-            console.error("Índice de produto inválido.");
-        }
-    }
-  
-    // Preenche o carrinho na página
-    let carrinhoDiv = document.getElementById('carrinho');
-    let total = 0;
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    carrinho.forEach((item, index) => {
-        carrinhoDiv.innerHTML += `
-            <tr>
-                <td>
-                    <div class="product">
-                        <img src="${item.imagem}" alt="${item.nome}" />
-                        <div class="info">
-                            <div class="name">${item.nome}</div>
-                        </div>
-                    </div>
-                    <abbr title="Excluir produto"><button class="btn-excluir" onclick="removerItem(${index})"><i class="fas fa-trash-alt"></i></button></abbr>
-                    <abbr title="Editar compra"><button class="btn-editar" onclick="editarItem(${index})"><i class="fas fa-pencil-alt"></i></button></abbr>
-                </td>
-                <td>${item.cafe}</td>
-                <td>${item.leite}</td>
-                <td>${item.observacoes}</td>
-                <td>R$ ${item.preco.toFixed(2)}</td>
-                <td>${item.quantidade}</td>
-                <td>R$ ${(item.preco * item.quantidade).toFixed(2)}</td>
-                
-            </tr>
-        `;
 
+    if (editarIndex !== null) {
+        const index = parseInt(editarIndex);
+
+        fetch('/meu_cafe/carrinho')
+            .then(response => response.json())
+            .then(carrinho => {
+                if (index >= 0 && index < carrinho.length) {
+                    const produto = carrinho[index];
+
+                    switch (produto.nome) {
+                        case "Cappuccino Italiano":
+                            document.getElementById('cappuccino-quantidade').value = produto.quantidade;
+                            document.getElementById('cappuccino-tipo').value = produto.tipo;
+                            document.getElementById('cappuccino-leite').value = produto.leite;
+                            document.getElementById('cappuccino-observacoes').value = produto.observacoes;
+                              break;
+                        case "Espresso":
+                            document.getElementById('espresso-quantidade').value = item.quantidade;
+                            document.getElementById('espresso-tipo').value = item.cafe;
+                            document.getElementById('espresso-leite').value = "";
+                            document.getElementById('espresso-observacoes').value = item.observacoes;
+                            break;
+                        case "Macchiato":
+                            document.getElementById('macchiato-quantidade').value = item.quantidade;
+                            document.getElementById('macchiato-tipo').value = item.cafe;
+                            document.getElementById('macchiato-leite').value = item.leite;
+                            document.getElementById('macchiato-observacoes').value = item.observacoes;
+                            break;
+                        case "Americano":
+                            document.getElementById('americano-quantidade').value = item.quantidade;
+                            document.getElementById('americano-tipo').value = item.cafe;
+                            document.getElementById('americano-leite').value = "";
+                            document.getElementById('americano-observacoes').value = item.observacoes;
+                            break;
+                        case "Latte":
+                            document.getElementById('latte-quantidade').value = item.quantidade;
+                            document.getElementById('latte-tipo').value = item.cafe;
+                            document.getElementById('latte-leite').value = item.leite;
+                            document.getElementById('latte-observacoes').value = item.observacoes;
+                            break;
+                        case "Moka":
+                            document.getElementById('moka-quantidade').value = item.quantidade;
+                            document.getElementById('moka-tipo').value = item.cafe;
+                            document.getElementById('moka-leite').value = item.leite;
+                            document.getElementById('moka-observacoes').value = item.observacoes;
+                            break;
+                        default:
+                            console.error("Produto não encontrado.");
+                    }
+
+                } else {
+                    console.error("Índice de produto inválido.");
+                }
+            })
+            .catch(error => console.error("Erro ao obter carrinho:", error));
+    }
+}
+
+function criarItemHTML(item, index) {
+    return `
+        <tr>
+            <td>
+                <div class="product">
+                    <img src="${item.imagem}" alt="${item.nome}" />
+                    <div class="info">
+                        <div class="name">${item.nome}</div>
+                    </div>
+                </div>
+                <abbr title="Excluir produto"><button class="btn-excluir" onclick="removerItem(${index})"><i class="fas fa-trash-alt"></i></button></abbr>
+                <abbr title="Editar compra"><button class="btn-editar" onclick="abrirModalEditar(${index})"><i class="fas fa-pencil-alt"></i></button></abbr>
+            </td>
+            <td>${item.cafe}</td>
+            <td>${item.leite}</td>
+            <td>${item.observacoes}</td>
+            <td>R$ ${item.preco.toFixed(2)}</td>
+            <td>${item.quantidade}</td>
+            <td>R$ ${(item.preco * item.quantidade).toFixed(2)}</td>
+        </tr>
+    `;
+}
+
+function atualizarCarrinho(carrinho) {
+    const carrinhoDiv = document.getElementById('carrinho'); 
+    let total = 0;
+
+    carrinhoDiv.innerHTML = '';
+
+    carrinho.forEach((item, index) => {
+        carrinhoDiv.innerHTML += criarItemHTML(item, index);
         total += item.preco * item.quantidade;
     });
+
     document.getElementById('sub-total').textContent = 'R$ ' + total.toFixed(2);
-
     document.getElementById('total').textContent = 'R$ ' + total.toFixed(2);
-    
-};
-
-function preencherCamposCappuccino(item) {
-    document.getElementById('cappuccino-quantidade').value = item.quantidade;
-    document.getElementById('cappuccino-tipo').value = item.cafe;
-    document.getElementById('cappuccino-leite').value = item.leite;
-    document.getElementById('cappuccino-observacoes').value = item.observacoes;
 }
 
-function preencherCamposEspresso(item) {
-    document.getElementById('espresso-quantidade').value = item.quantidade;
-    document.getElementById('espresso-tipo').value = item.cafe;
-    document.getElementById('espresso-leite').value = "";
-    document.getElementById('espresso-observacoes').value = item.observacoes;
-}
-
-function preencherCamposMacchiato(item) {
-    document.getElementById('macchiato-quantidade').value = item.quantidade;
-    document.getElementById('macchiato-tipo').value = item.cafe;
-    document.getElementById('macchiato-leite').value = item.leite;
-    document.getElementById('macchiato-observacoes').value = item.observacoes;
-}
-
-function preencherCamposAmericano(item) {
-    document.getElementById('americano-quantidade').value = item.quantidade;
-    document.getElementById('americano-tipo').value = item.cafe;
-    document.getElementById('americano-leite').value = "";
-    document.getElementById('americano-observacoes').value = item.observacoes;
-}
-
-function preencherCamposLatte(item) {
-    document.getElementById('latte-quantidade').value = item.quantidade;
-    document.getElementById('latte-tipo').value = item.cafe;
-    document.getElementById('latte-leite').value = item.leite;
-    document.getElementById('latte-observacoes').value = item.observacoes;
-}
-
-function preencherCamposMoka(item) {
-    document.getElementById('moka-quantidade').value = item.quantidade;
-    document.getElementById('moka-tipo').value = item.cafe;
-    document.getElementById('moka-leite').value = item.leite;
-    document.getElementById('moka-observacoes').value = item.observacoes;
-}
+fetch('/meu_cafe/carrinho')
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error('Erro ao obter carrinho.');
+    })
+    .then(carrinho => {
+        atualizarCarrinho(carrinho);
+    })
+    .catch(error => console.error(error.message));
 
 function removerItem(index) {
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    carrinho.splice(index, 1); // Remove o item do carrinho
-    localStorage.setItem('carrinho', JSON.stringify(carrinho)); // Atualiza o carrinho no armazenamento local
-
-    // Atualiza a exibição do carrinho na página removendo o item da tabela
-    let carrinhoDiv = document.getElementById('carrinho');
-    let total = 0;
-    carrinhoDiv.innerHTML = ''; // Limpa a tabela antes de recriá-la
-    carrinho.forEach((item, index) => {
-        carrinhoDiv.innerHTML += `
-            <tr>
-                <td>
-                    <div class="product">
-                        <img src="${item.imagem}" alt="${item.nome}" />
-                        <div class="info">
-                            <div class="name">${item.nome}</div>
-                        </div>
-                    </div>
-                    <abbr title="Excluir produto"><button class="btn-excluir" onclick="removerItem(${index})"><i class="fas fa-trash-alt"></i></button></abbr>
-                    <abbr title="Editar compra"><button class="btn-editar" onclick="editarItem(${index})"><i class="fas fa-pencil-alt"></i></button></abbr>
-                </td>
-                <td>${item.cafe}</td>
-                <td>${item.leite}</td>
-                <td>${item.observacoes}</td>
-                <td>R$ ${item.preco.toFixed(2)}</td>
-                <td>${item.quantidade}</td>
-                <td>R$ ${(item.preco * item.quantidade).toFixed(2)}</td>
-            </tr>
-        `;
-        total += item.preco * item.quantidade;
-    });
-    document.getElementById('sub-total').textContent = 'R$ ' + total.toFixed(2);
-
-    document.getElementById('total').textContent = 'R$ ' + total.toFixed(2);
+    fetch('/remover_item', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ index: index })
+    })
+    .then(response => response.json())
+    .then(() => window.location.reload())
+    .catch(error => console.error('Erro ao remover item do carrinho:', error.message));
 }
 
-
-// Função para esvaziar o carrinho
-function esvaziarCarrinho() {
-    localStorage.removeItem('carrinho'); // Remove o carrinho do armazenamento local
-    
-    // Atualiza a exibição do carrinho na página
-    let carrinhoDiv = document.getElementById('carrinho');
-    carrinhoDiv.innerHTML = ''; // Limpa a tabela
-    
-    // Atualiza o resumo da compra
-    document.getElementById('sub-total').textContent = 'R$ 0.00';
-    document.getElementById('total').textContent = 'R$ 0.00';
+function editarItem(index, tipoCafe) {
+    window.location.href = `/meu_cafe/${tipoCafe}?editar=${index}`;
 }
 
-// Vincular o evento de clique ao botão "Esvaziar Carrinho"
-document.getElementById('esvaziarCarrinhoBtn').addEventListener('click', esvaziarCarrinho);
-
-function editarItem(index) {
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    let item = carrinho[index];
-    switch (item.nome) {
-        case "Cappuccino Italiano":
-            // Adiciona o parâmetro 'editar' na URL para indicar que estamos editando o produto
-            window.location.href = `${urls.cappuccino_italiano}?editar=${index}`;
-            break;
-        case "Espresso":
-            window.location.href = `${urls.espresso}?editar=${index}`;
-            break;
-        case "Macchiato":
-            window.location.href = `${urls.macchiato}?editar=${index}`;
-            break;
-        case "Americano":
-            window.location.href = `${urls.americano}?editar=${index}`;
-            break;
-        case "Latte":
-            window.location.href = `${urls.latte}?editar=${index}`;
-            break;
-        case "Moka":
-            window.location.href = `${urls.moka}?editar=${index}`;
-            break;
-        default:
-            console.error("Produto não encontrado.");
-    }
+function abrirModalEditar(index) {
+    fetch('/meu_cafe/carrinho')
+        .then(response => response.json())
+        .then(carrinho => {
+            if (index >= 0 && index < carrinho.length) {
+                const produto = carrinho[index];
+                const tipoCafe = produto.nome.toLowerCase().replace(' ', '_');
+                editarItem(index, tipoCafe);
+            } else {
+                console.error("Índice de produto inválido.");
+            }
+        })
+        .catch(error => console.error("Erro ao obter carrinho:", error));
 }
 
 function concluirCompra() {
-    // lógica para concluir a compra aqui
-    localStorage.removeItem('carrinho'); // Remove o carrinho do armazenamento local 
+    fetch('/concluir_compra', { method: 'POST' })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            localStorage.removeItem('carrinho');
+            window.location.href = '/meu_cafe/compra_concluida';
+        } else {
+            throw new Error(data.message);
+        }
+    })
+    .catch(error => console.error('Erro ao concluir a compra:', error.message));
 }
 
-// Vincular o evento de clique ao botão "Esvaziar Carrinho"
-document.getElementById('concluirCompraBtn').addEventListener('click', concluirCompra);
+document.getElementById('concluirCompraBtn').onclick = concluirCompra;
 
+document.getElementById('esvaziarCarrinhoBtn').onclick = function() {
+    fetch('/esvaziar_carrinho', { method: 'POST' })
+        .then(response => response.json())
+        .then(() => {
+            localStorage.removeItem('carrinho');
+            window.location.reload();
+        })
+        .catch(error => console.error('Erro ao esvaziar o carrinho:', error.message));
+};
+
+function adicionarAoCarrinho(produto) {
+    fetch('/adicionar_ao_carrinho', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ produto: produto })
+    })
+    .then(response => response.json())
+    .then(() => window.location.href = '/meu_cafe/carrinho')
+    .catch(error => console.error('Erro ao adicionar item ao carrinho:', error.message));
+}

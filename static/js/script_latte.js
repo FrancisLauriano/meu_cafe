@@ -1,33 +1,52 @@
-// script_latte.js
 window.onload = function() {
-    // Verifica se há parâmetros na URL para determinar se o usuário está editando um produto
     const urlParams = new URLSearchParams(window.location.search);
     const editarIndex = urlParams.get('editar');
-    
+
     if (editarIndex !== null) {
-        // Obtém o índice do produto a ser editado
         const index = parseInt(editarIndex);
-        
-        // Obtém o carrinho do armazenamento local
-        let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-        
-        // Verifica se o índice está dentro dos limites do carrinho
-        if (index >= 0 && index < carrinho.length) {
-            const produto = carrinho[index];
-            
-            // Preenche os campos da página com os detalhes do produto
-            document.getElementById('latte-quantidade').value = produto.quantidade;
-            document.getElementById('latte-tipo').value = produto.cafe;
-            document.getElementById('latte-leite').value = produto.leite;
-            document.getElementById('latte-observacoes').value = produto.observacoes;
-        } else {
-            console.error("Índice de produto inválido.");
-        }
+
+        fetch('/meu_cafe/carrinho')
+            .then(response => response.json())
+            .then(carrinho => {
+                if (index >= 0 && index < carrinho.length) {
+                    const produto = carrinho[index];
+
+                    document.getElementById('latte-quantidade').value = produto.quantidade;
+                    document.getElementById('latte-tipo').value = produto.cafe;
+                    document.getElementById('latte-leite').value = produto.leite;
+                    document.getElementById('latte-observacoes').value = produto.observacoes;
+                } else {
+                    console.error("Índice de produto inválido.");
+                }
+            })
+            .catch(error => console.error("Erro ao obter carrinho:", error));
     }
 };
 
-function adicionarAoCarrinho(carrinhoUrl) {
-    // Captura informações do produto
+
+function editarItem(index, tipoCafe) {
+    fetch(`/meu_cafe/carrinho/editar/${index}`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ index: index })
+    })
+    .then(response => {
+        if (response.ok && response.headers.get('Content-Type').includes('application/json')) {
+            return response.json();
+        }
+        throw new Error('Erro ao atualizar item do carrinho.');
+    })
+    .then(() => {
+        window.location.href = `/meu_cafe/${tipoCafe}?editar=${index}`;
+    })
+    .catch(error => console.error(error.message));
+}
+
+
+
+function adicionarAoCarrinho() {
     const nomeProduto = "Latte";
     const valorProduto = 8.99;
     const quantidadeProduto = parseInt(document.getElementById('latte-quantidade').value);
@@ -35,7 +54,6 @@ function adicionarAoCarrinho(carrinhoUrl) {
     const tipoLeite = document.getElementById('latte-leite').value;
     const observacoes = document.getElementById('latte-observacoes').value;
 
-    // Constrói o objeto do item do carrinho
     const item = {
         nome: nomeProduto,
         preco: valorProduto,
@@ -43,30 +61,27 @@ function adicionarAoCarrinho(carrinhoUrl) {
         cafe: tipoCafe,
         leite: tipoLeite,
         observacoes: observacoes,
-        imagem: "../static/image/menu-6.png" 
+        imagem: "../static/image/menu-1.png" 
     };
 
-    // Obtém o carrinho do armazenamento local
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-    // Verifica se o produto já está no carrinho
-    const index = carrinho.findIndex(prod => prod.nome === nomeProduto);
-    if (index !== -1) {
-        // Se o produto já estiver no carrinho, substitui a quantidade existente pela nova quantidade
-        carrinho[index].quantidade = quantidadeProduto;
-        carrinho[index].leite = tipoLeite;
-        carrinho[index].cafe = tipoCafe;
-        carrinho[index].observacoes = observacoes;
-    } else {
-        // Se o produto não estiver no carrinho, adiciona o novo item
-        carrinho.push(item);
-    }
-
-    // Atualiza o carrinho no armazenamento local
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
-    // Redireciona para a página do carrinho
-    window.location.href = carrinhoUrl;
+    fetch('/adicionar_ao_carrinho', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = '/meu_cafe/carrinho_page';
+        } else {
+            console.error("Erro ao adicionar ao carrinho:", data.message);
+        }
+    })
+    .catch(error => {
+        console.error("Erro ao adicionar ao carrinho:", error);
+    });
 }
 
 function increaseQuantity(elementId) {
@@ -82,7 +97,6 @@ function decreaseQuantity(elementId) {
         inputElement.value = currentValue - 1;
     }
 }
-
 
 
 
