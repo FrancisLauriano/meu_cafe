@@ -26,7 +26,7 @@ window.onload = function() {
 
 function editarItem(index, tipoCafe) {
     fetch(`/meu_cafe/carrinho/editar/${index}`, {
-        method: 'POST',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },

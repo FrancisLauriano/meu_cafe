@@ -27,7 +27,7 @@ window.onload = function() {
 // redireciona para a página correta de edição do item
 function editarItem(index, tipoCafe) {
     fetch(`/meu_cafe/carrinho/editar/${index}`, {
-        method: 'POST',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
         },

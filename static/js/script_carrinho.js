@@ -112,7 +112,7 @@ fetch('/meu_cafe/carrinho')
 
 function removerItem(index) {
     fetch('/remover_item', {
-        method: 'POST',
+        method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ index: index })
     })
@@ -140,24 +140,37 @@ function abrirModalEditar(index) {
         .catch(error => console.error("Erro ao obter carrinho:", error));
 }
 
-function concluirCompra() {
-    fetch('/concluir_compra', { method: 'POST' })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            localStorage.removeItem('carrinho');
-            window.location.href = '/meu_cafe/compra_concluida';
-        } else {
-            throw new Error(data.message);
-        }
-    })
-    .catch(error => console.error('Erro ao concluir a compra:', error.message));
-}
 
+function concluirCompra(e) {
+    e.preventDefault();
+    
+    fetch('/meu_cafe/carrinho', { method: 'GET' })
+    .then(response => response.json())
+    .then(carrinho => {
+        if (carrinho.length === 0) {
+            alert("O carrinho está vazio. Não é possível concluir a compra.");
+            return; 
+        }
+        
+        fetch('/concluir_compra', { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                localStorage.removeItem('carrinho');
+                window.location.href = '/meu_cafe/compra_concluida';
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => console.error('Erro ao concluir a compra:', error.message));
+    })
+    .catch(error => console.error('Erro ao verificar o carrinho:', error.message));
+}
 document.getElementById('concluirCompraBtn').onclick = concluirCompra;
 
+
 document.getElementById('esvaziarCarrinhoBtn').onclick = function() {
-    fetch('/esvaziar_carrinho', { method: 'POST' })
+    fetch('/esvaziar_carrinho', { method: 'DELETE' })
         .then(response => response.json())
         .then(() => {
             localStorage.removeItem('carrinho');

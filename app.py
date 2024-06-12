@@ -67,7 +67,7 @@ def adicionar_ao_carrinho():
     produto_existente = next((item for item in carrinho if item['nome'] == nome_produto), None)
     
     if produto_existente:
-      
+        
         produto_existente.update(novo_item)
     else:
       
@@ -76,34 +76,39 @@ def adicionar_ao_carrinho():
     session['carrinho'] = carrinho
     return jsonify(success=True)
 
-@app.route('/remover_item', methods=['POST'])
+@app.route('/remover_item', methods=['DELETE'])
 def remover_item():
     index = request.json.get('index')
     carrinho = session.get('carrinho', [])
     if 0 <= index < len(carrinho):
         carrinho.pop(index)
         session['carrinho'] = carrinho
-    return jsonify(success=True)
+        return jsonify(success=True)
+    return jsonify(success=False, message="Índice inválido")
 
-@app.route('/esvaziar_carrinho', methods=['POST'])
+@app.route('/esvaziar_carrinho', methods=['DELETE'])
 def esvaziar_carrinho():
     session.pop('carrinho', None)
     return jsonify(success=True)
 
-@app.route('/meu_cafe/carrinho/editar/<int:index>', methods=['POST'])
+@app.route('/meu_cafe/carrinho/editar/<int:index>', methods=['PUT'])
 def atualizar_item_carrinho(index):
     carrinho = session.get('carrinho', [])
     if 0 <= index < len(carrinho):
         data = request.json
-        carrinho[index] = data
+        carrinho[index].update(data)
         session['carrinho'] = carrinho
         return jsonify(success=True)
     return jsonify(success=False, message="Índice inválido")
 
 @app.route('/concluir_compra', methods=['POST'])
 def concluir_compra():
+    carrinho = session.get('carrinho', [])
+    if not carrinho:
+        return jsonify(success=False, message="O carrinho está vazio. Não é possível concluir a compra.")
     session.pop('carrinho', None)
     return jsonify(success=True)
+
 
 
 
