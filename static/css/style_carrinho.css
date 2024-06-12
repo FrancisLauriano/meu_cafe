@@ -619,6 +619,7 @@ aside .box footer {
   }
 }
 
+
 @media (max-width: 450px) {
   html {
       font-size: 50%;
@@ -628,6 +629,88 @@ aside .box footer {
       height: auto;
       width: 100%;
   }
+
+  .heading {
+      font-size: 4rem;
+  }
+
+  .heading span {
+      font-size: 2rem;
+  }
+
+  #menu-btn {
+      display: initial;
+  }
+
+  #menu-btn.fa-times {
+      transform: rotate(180deg);
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a {
+    display: block;
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 1.5rem 2rem;
+  }
+
+  .home {
+      text-align: center;
+  }
+
+  .home .row .content h3 {
+      font-size: 3rem;
+  }
+
+  .menu .box-container .box {
+      margin-left: 0;
+      margin-top: 6rem;
+      font-size: 6rem;
+      flex-flow: column;
+      text-align: center;
+  }
+
+  .menu .box-container .box img {
+      margin-left: 0;
+      margin-top: -6rem;
+  }
+
+ 
+  .conteudo {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .conteudo aside {
+      margin-top: 20px; 
+      width: 100%;
+  }
+
+  .custom-table {
+      width: calc(100% - 40px);
+      margin-left: 20px;
+      margin-right: 20px;
+      position: relative;
+      overflow-x: auto;
+      display: block;
+  }
+
+  .custom-table th, .custom-table td {
+      word-wrap: break-word; 
+      white-space: normal;
+      font-size: 1.5rem;
+  }
+
 }
-
-
