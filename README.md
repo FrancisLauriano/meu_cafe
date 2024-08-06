@@ -61,7 +61,6 @@ Os clientes têm a oportunidade de deixar avaliações e comentários sobre suas
 
 ... 
 
-... 
 
 
 ## Instação das depedências :arrow_down_small:
@@ -81,8 +80,10 @@ $ npm install
 
 ```bash
 # development
-python -m flask run
+python -m flask runok
+```
 
+```bash
 Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
