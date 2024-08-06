@@ -78,8 +78,8 @@ $ npm install
 
 ## Executar app :arrow_forward:
 
+**development:**
 ```bash
-# development
 python -m flask run
 ```
 
