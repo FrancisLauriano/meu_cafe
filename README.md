@@ -69,9 +69,3 @@ Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
 ```
 
-## Prótotipo de baixa fidelidade do Projeto "Meu Café":
-
-```bash
-https://www.figma.com/file/wFuoehlSgN9DcC9hcoGqvQ/prototipo_baixa_fidelidade_Meu-Cafe?type=whiteboard&t=5MzYNfVIaKAinT07-6
-
-```
