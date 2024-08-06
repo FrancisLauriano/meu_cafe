@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/static/v1?label=CSS&message=3&color=1572b6&style=for-the-badge&logo=css3"/>
   <img src="http://img.shields.io/static/v1?label=javascript&message=ES6&color=f7df1e&style=for-the-badge&logo=javascript"/>
   <img src="http://img.shields.io/static/v1?label=python&message=3.12&color=blue&style=for-the-badge&logo=python"/>
-  <img src="http://img.shields.io/static/v1?label=flask&message=3.12&color=blue&style=for-the-badge&logo=flask"/>
+  <img src="http://img.shields.io/static/v1?label=flask&message=3.0.X&color=blue&style=for-the-badge&logo=flask"/>
   <img src="http://img.shields.io/static/v1?label=Git&message=2.45.2&color=f05032&style=for-the-badge&logo=git"/>
   <img src="http://img.shields.io/static/v1?label=GitHub&message=2024&color=181717&style=for-the-badge&logo=github"/>
   <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=green&style=for-the-badge"/>
@@ -99,6 +99,7 @@ com o servidor.
 
 - [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Python](https://www.python.org/downloads/)
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/installation/)
 - [Git](https://git-scm.com/downloads)
 - [GitHub](https://github.com/)
 
