@@ -80,7 +80,7 @@ $ npm install
 
 ```bash
 # development
-python -m flask runok
+python -m flask run
 ```
 
 ```bash
